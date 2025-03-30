@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         textPolaroid:
           "Umfang der von uns durchgeführten Arbeiten: 50m neuer Entwässerung/Rinnen, neue Abläufe, neuer Industrieboden, neue Gitterroste.",
         textMars:
-          "Umfang der von uns durchgeführten Arbeiten: Entnahme/ Abtragen des alten Bodens und alter Abläufe, fertigung und Installation 5m hoher Wandelemente aus Edelstahl, neuer Industrieboden, neue Abläufe, neuer Rammschutz und weiteres.",
+          "Umfang der von uns durchgeführten Arbeiten: Entnahme/ Abtragen des alten Bodens und alter Abläufe, Fertigung und Installation 5m hoher Wandelemente aus Edelstahl, neuer Industrieboden, neue Abläufe, neuer Rammschutz und weiteres.",
       },
       imageTitleZoom:
         "Bei Fragen zu einzelnen Produkten oder Beratungsbedarf erreichen Sie uns unter info@neo-building.com oder telefonisch unter +49-221-95490929-0",
