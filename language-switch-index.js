@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
         descriptionMars:
           "5m hohe Wandelemente, neuer Industrieboden, neue Abläufe, neuer Rammschutz und weiteres.",
         descriptionPolaroid:
-          "50m neuer Entwässerung/Rinnen, neue Abläufe, neuer Industrieboden.",
+          "50m neue Entwässerung/Rinnen, neue Abläufe, neuer Industrieboden.",
         // Go to references Call out
         projectExperience: "Projekt Erfahrung",
         referencesDescription:

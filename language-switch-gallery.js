@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         descriptionMars:
           "5m hohe Wandelemente, neuer Industrieboden, neue Abläufe, neuer Rammschutz und weiteres.",
         descriptionPolaroid:
-          "50m neuer Entwässerung/Rinnen, neue Abläufe, neuer Industrieboden.",
+          "50m neue Entwässerung/Rinnen, neue Abläufe, neuer Industrieboden.",
         descriptionHotels:
           "Glasduschen/Spiegel/Schreibtische/Raumteiler als Sonderanfertigung. Bei Fragen kontaktieren Sie uns gerne.",
         goToProjects: "Referenzen",
