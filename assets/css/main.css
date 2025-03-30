@@ -144,6 +144,10 @@ sup {
   width: 400px;
   max-width: 100%;
 }
+#featuresMore img[src="assets/img/logo/neoxidLogo.svg"] {
+  width: 400px;
+  max-width: 100%;
+}
 
 @media (max-width: 570px) {
   #hero img[src="assets/img/logo/neoLogoGreen.svg"] {
@@ -153,7 +157,11 @@ sup {
     width: 200px;
     max-width: 100%;
   }
-  #constructionsNeox img[src="assets/img/logo/neoVisionLogo.svg"] {
+  #constructionsNeovision img[src="assets/img/logo/neoVisionLogo.svg"] {
+    width: 200px;
+    max-width: 100%;
+  }
+  #featuresMore img[src="assets/img/logo/neoxidLogo.svg"] {
     width: 200px;
     max-width: 100%;
   }
