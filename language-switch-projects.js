@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         glasUsed: "Tonnen Glas verbaut",
         steelUsed: "Tonnen Edelstahl verarbeitet",
         textPolaroid:
-          "Umfang der von uns durchgeführten Arbeiten: 50m neuer Entwässerung/Rinnen, neue Abläufe, neuer Industrieboden, neue Gitterroste.",
+          "Umfang der von uns durchgeführten Arbeiten: 50m neue Entwässerung/Rinnen, neue Abläufe, neuer Industrieboden, neue Gitterroste.",
         textMars:
           "Umfang der von uns durchgeführten Arbeiten: Entnahme/ Abtragen des alten Bodens und alter Abläufe, Fertigung und Installation 5m hoher Wandelemente aus Edelstahl, neuer Industrieboden, neue Abläufe, neuer Rammschutz und weiteres.",
         textHotels:
