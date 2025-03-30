@@ -184,6 +184,8 @@ document.addEventListener("DOMContentLoaded", function () {
         h2More: "Industrial Floors",
         pDescriptionMore:
           "Industrial floors for production areas, kitchens, warehouses...</br>Offer high resistance to heat and chemicals (e.g., industrial cleaning agents)</br>Easy to clean thanks to seamless surfaces.",
+        // Image Slider Title
+        beforeAfterTitle: "Before | After",
       },
       imageTitleZoom:
         "For questions about specific products or if you need advice, you can reach us at info@neo-building.com or by phone at +49-221-95490929-0.",
@@ -367,6 +369,7 @@ document.addEventListener("DOMContentLoaded", function () {
         h2More: "Industrieböden",
         pDescriptionMore:
           "Industrieböden für Produktionflächen, Küchen, Lagerhallen...<br />Bieten hohe Widerstandsfähigkeit gegen Wärme und Chemikalien (Bspw.Industrielle-Reinigungsmittel) <br />Leichte Reinigung da keine Fugen vorhanden sind.",
+        beforeAfterTitle: "Vorher | Nachher",
       },
       imageTitleZoom:
         "Bei Fragen zu einzelnen Produkten oder Beratungsbedarf erreichen Sie uns unter info@neo-building.com oder telefonisch unter +49-221-95490929-0",
