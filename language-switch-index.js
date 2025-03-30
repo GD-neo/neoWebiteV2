@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
         featureCLassicPointTwo:
           "Drehtür-Beschläge oben und unten am Glas befestigt",
         featureCLassicPointThree:
-          "Sonderanfertigungen des Beschlages mit Pulverbeschichtung/PVD z.B. schwarzmatt möglich",
+          "Sonderanfertigungen des Beschlages mit Pulverbeschichtung/PVD z.B. Schwarzmatt möglich",
         // NEOVISION Pura
         featurePuraTitle: "<span class='custom-green'>NEOVISION</span> Pura",
         featurePuraDescription:

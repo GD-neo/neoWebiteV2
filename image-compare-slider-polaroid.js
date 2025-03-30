@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const translations = {
     en: {
       pageContent: {
-        beforeAfterTitle: "Before|After",
+        beforeAfterTitle: "Before | After",
       },
     },
     de: {
       pageContent: {
-        beforeAfterTitle: "Vorher|Nachher",
+        beforeAfterTitle: "Vorher | Nachher",
       },
     },
   };

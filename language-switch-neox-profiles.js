@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       constructionsNeoxProfiles: {
         h2Glas: "Overview",
-        pageIntroDescription2:
+        pageIntroDescription4:
           "If you do not find what you are looking for in our standard profiles or would like to have your own profile manufactured, contact us. We will find the solution for your ideas.",
         // Feature Section
         featureMore: "Profil DF",
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       constructionsNeoxProfiles: {
         h2Glas: "Übersicht",
-        pageIntroDescription2:
+        pageIntroDescription4:
           "Sollten Sie bei unseren Standard Profilen nicht fündig werden oder Ihr eigenes Profil fertigen lassen wollen, kontaktieren Sie uns. Wir finden die Lösung für Ihre Ideen.",
         // Feature Section
         featureMore: "Profil DF",

@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
         classicContentPoint7:
           "Beschlag aus massivem Messing, hochglanz verchromt",
         classicContentPoint8:
-          "Sonderanfertigungen des Beschlags mit Pulverbeschichtung/PVD Beschichtung z.B schwarzmatt möglich",
+          "Sonderanfertigungen des Beschlags mit Pulverbeschichtung/PVD Beschichtung z.B Schwarzmatt möglich",
         //   Call to action examples
         callToActionHeaderExamples: "Wir finden die Lösung für Ihre Ideen!",
         callToActionDescriptionExamples:
@@ -328,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function () {
         featureCLassicPointTwo:
           "Drehtür-Beschläge oben und unten am Glas befestigt",
         featureCLassicPointThree:
-          "Sonderanfertigungen des Beschlages mit Pulverbeschichtung/PVD z.B. schwarzmatt möglich",
+          "Sonderanfertigungen des Beschlages mit Pulverbeschichtung/PVD z.B. Schwarzmatt möglich",
         // NEOVISION Pura
         featurePuraTitle: "<span class='custom-green'>NEOVISION</span> Pura",
         featurePuraDescription:
