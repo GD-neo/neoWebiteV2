@@ -1,45 +1,65 @@
+.partners-section {
+  padding: 15px 0;
+  overflow: hidden; /* Ensure no overflow outside section */
+}
+
+.row-container {
+  margin-bottom: 20px;
+  overflow: hidden; /* Contain the scrolling content */
+}
+
+.scroll-row {
+  display: flex; /* Use flexbox for horizontal layout */
+  animation: scroll 80s linear infinite; /* Default duration */
+  white-space: nowrap; /* Prevent wrapping */
+  will-change: transform; /* Hint to browser for optimization */
+}
+
+.scroll-item {
+  font-size: 16px;
+  margin: 0 20px; /* Spacing between items */
+  flex-shrink: 0; /* Prevent items from shrinking */
+}
+
 /* Staggered animation timings and durations */
 .row-1 .scroll-row {
-  animation-name: scroll;
   animation-duration: 80s;
 }
 
 .row-2 .scroll-row {
-  animation-name: scroll;
   animation-duration: 85s;
   animation-delay: -5s;
 }
 
 .row-3 .scroll-row {
-  animation-name: scroll;
   animation-duration: 67s;
   animation-delay: -10s;
 }
 
 .row-4 .scroll-row {
-  animation-name: scroll;
   animation-duration: 83s;
-  animation-delay: -15s; /* Adjusted delay for consistency */
+  animation-delay: -15s;
 }
 
 .row-5 .scroll-row {
-  animation-name: scroll;
-  animation-duration: 78s; /* New row, unique duration */
-  animation-delay: -20s; /* Staggered further */
+  animation-duration: 78s;
+  animation-delay: -20s;
 }
 
 @keyframes scroll {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
+  100% {
     transform: translateX(-50%);
   }
 }
 
-/* Pause animation on hover */
-.scroll-row:hover {
-  animation-play-state: paused;
+/* Pause animation on hover (desktop only) */
+@media (hover: hover) {
+  .scroll-row:hover {
+    animation-play-state: paused;
+  }
 }
 
 /* Larger font for big screens */
@@ -49,31 +69,43 @@
   }
 }
 
-/* Adjustments for very small screens */
+/* Adjustments for mobile devices */
+@media (max-width: 768px) {
+  .scroll-item {
+    font-size: 14px;
+    margin: 0 15px; /* Reduce spacing */
+  }
+  .row-container {
+    margin-bottom: 15px;
+  }
+  .partners-section {
+    padding: 10px 0;
+  }
+  /* Reduce animation duration for better performance */
+  .row-1 .scroll-row {
+    animation-duration: 40s; /* Halved for mobile */
+  }
+  .row-2 .scroll-row {
+    animation-duration: 42.5s;
+  }
+  .row-3 .scroll-row {
+    animation-duration: 33.5s;
+  }
+  .row-4 .scroll-row {
+    animation-duration: 41.5s;
+  }
+  .row-5 .scroll-row {
+    animation-duration: 39s;
+  }
+}
+
+/* Very small screens (phones) */
 @media (max-width: 480px) {
   .scroll-item {
     font-size: 12px;
-    margin: 0 15px;
+    margin: 0 10px;
   }
   .row-container {
     margin-bottom: 10px;
   }
-  .partners-section {
-    padding: 15px 0;
-  }
-  .row-1 .scroll-row {
-    animation-duration: 85s;
-  }
-  .row-2 .scroll-row {
-    animation-duration: 90s;
-  }
-  .row-3 .scroll-row {
-    animation-duration: 72s;
-  }
-  .row-4 .scroll-row {
-    animation-duration: 88s;
-  }
-  .row-5 .scroll-row {
-    animation-duration: 83s;
-  } /* Adjusted for small screens */
 }

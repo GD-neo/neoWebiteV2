@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  //   Endless Scroll
-  // Company names for each row (you can replace these with your actual partners)
-  // All company names combined and sorted alphabetically
+  // Company names (unchanged)
   const allCompanies = [
     "ABZ Mellendorf",
     "Alpenhof Murnau, Murnau am Staffelsee",
@@ -98,22 +96,24 @@ document.addEventListener("DOMContentLoaded", function () {
     "Harzresort Torfhaus",
     "Hotel Kurhaus Wyk auf Föhr",
     "Hotel TUI Blue Sylt",
-  ].sort(); // Sort A-Z
+  ].sort();
 
-  // Split into 5 rows, ~18-19 names each
-  const companies1 = allCompanies.slice(0, 19); // 19 names (A-B)
-  const companies2 = allCompanies.slice(19, 38); // 19 names (C-G)
-  const companies3 = allCompanies.slice(38, 57); // 19 names (G-M)
-  const companies4 = allCompanies.slice(57, 76); // 19 names (M-S)
-  const companies5 = allCompanies.slice(76, 92); // 16 names (S-W)
+  // Split into 5 rows
+  const companies1 = allCompanies.slice(0, 19);
+  const companies2 = allCompanies.slice(19, 38);
+  const companies3 = allCompanies.slice(38, 57);
+  const companies4 = allCompanies.slice(57, 76);
+  const companies5 = allCompanies.slice(76, 92);
 
-  // Function to populate and duplicate items for infinite scroll
+  // Function to populate and duplicate items
   function populateRow(rowId, companies) {
     const row = document.getElementById(rowId);
     const items = companies
       .map((company) => `<span class="scroll-item">${company}</span>`)
       .join("");
-    row.innerHTML = items; // Duplicate for seamless looping
+    row.innerHTML = items + items; // Explicitly duplicate for seamless loop
+    // Force reflow to ensure animation starts
+    void row.offsetWidth;
   }
 
   // Populate all rows
