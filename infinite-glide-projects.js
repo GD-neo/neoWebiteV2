@@ -112,7 +112,7 @@ function populateRow(rowId, companies) {
   const items = companies
     .map((company) => `<span class="scroll-item">${company}</span>`)
     .join("");
-  row.innerHTML = items + items; // Duplicate for seamless looping
+  row.innerHTML = items; // Duplicate for seamless looping
 }
 
 // Populate all rows
