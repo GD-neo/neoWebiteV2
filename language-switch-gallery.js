@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         siteHeader2: "Wir finden die Lösung für Ihre Ideen!",
         filterAll: "Alle",
         pleaseNote:
-          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
+          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         descriptionMars:
           "5m hohe Wandelemente, neuer Industrieboden, neue Abläufe, neuer Rammschutz und weiteres.",
         descriptionPolaroid:

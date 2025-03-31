@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //   Call to action gallery
         callToActionHeaderGallery: "Weitere Einblicke",
         callToActionDescriptionGallery:
-          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
+          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         callToActionLinkGallery: "Galerie",
         /// Channel S Section Content
         channelSContentHeader:
@@ -353,7 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
         filterDrains: "Abläufe",
 
         pleaseNote:
-          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
+          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         descriptionChannelE:
           "Komplett-Set aus Edelstahl mit integriertem elegantem Design-Ablaufprofil aus massivem Edelstahl",
         descriptionChannelX:

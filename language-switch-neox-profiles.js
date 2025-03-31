@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
         featureProfilT90PointSix: "Also perfectly suitable for door frames",
         // NEOX Profil DF
         featureProfilDFTitle:
-          "<span class='custom-green'>NEO</span>X Profil DF aus Edelstahl",
+          "<span class='custom-green'>NEO</span>X Profil DF made of stainless steel",
         featureProfilDFPointOne:
           "Expansion joint profile made of stainless steel",
         featureProfilDFPointTwo:
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //   Call to action gallery
         callToActionHeaderGallery: "Weitere Einblicke",
         callToActionDescriptionGallery:
-          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
+          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         callToActionLinkGallery: "Galerie",
 
         // Image Section Content
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
         filterDrains: "Abläufe",
 
         pleaseNote:
-          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
+          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         descriptionChannelE:
           "Komplett-Set aus Edelstahl mit integriertem elegantem Design-Ablaufprofil aus massivem Edelstahl",
         descriptionChannelX:

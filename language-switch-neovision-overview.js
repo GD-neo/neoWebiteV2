@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
         classicContentHeader:
           "<span class='custom-green'>NEOVISION</span> Classic: Moderner Klassiker",
         classicContentDescription:
-          "Die Drehtür der Serie NEOVISION Classic aus 8 mm strarkem Sicherheitsglas lässt sich sowohl direkt an der Wand befestigen als auch an einem Festelement in Flucht oder auch überlappend, im Winkel von 90° oder 135°. Mit dem umfangreichen Beschlagsystem lassen sich nahezu alle Duschsituationen realisieren.",
+          "Die Drehtür der Serie NEOVISION Classic aus 8 mm starkem Sicherheitsglas lässt sich sowohl direkt an der Wand befestigen als auch an einem Festelement in Flucht oder auch überlappend, im Winkel von 90° oder 135°. Mit dem umfangreichen Beschlagsystem lassen sich nahezu alle Duschsituationen realisieren.",
         classicContentDescription2:
           "Die innen fast flächenbündige Konstruktion des hochglänzend verchromten Beschlages aus massivem Messing sorgt für höchtmögliche Dichtigkeit und optimalen Reinigungskomfort. Der vor Spritzwasser geschützte Hebe-Senk-Mechanismus garantiert maximale Langlebigkeit und ist in der Höhe ebenso stufenlos einstellbar wie der Schließwinkel der Tür.",
         classicContentHeader2:
@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //   Call to action gallery
         callToActionHeaderGallery: "Weitere Einblicke",
         callToActionDescriptionGallery:
-          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
+          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         callToActionLinkGallery: "Galerie",
         // Easy Section Content
         easyContentHeader:
@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Image Section Content
         filterAll: "Alle",
         pleaseNote:
-          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
+          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         descriptionClassic: "Moderner Klassiker",
         descriptionEasy: "Einfach Gut.",
         descriptionPura: "Minimalismus Pur.",

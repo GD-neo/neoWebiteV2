@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         siteHeader3: "Wir finden die Lösung für Ihre Ideen!",
         siteHeader4: "Auswahl Bilder",
         pleaseNote:
-          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
+          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         moreThan: "Mehr als",
         happyCustomer: "Zufriedene Kunden",
         projectsDone: "Bauvorhaben abgeschlossen",

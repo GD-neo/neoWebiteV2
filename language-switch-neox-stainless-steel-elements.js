@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Image Section Content
         filterAll: "Edelstahlbauelemente",
         pleaseNote:
-          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
+          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         //   Image Titles
         descriptionImages:
           "NEOX Edelstahlkomponenten bieten eine Reihe hochwertiger, langlebiger Lösungen für verschiedene industrielle Anwendungen.",

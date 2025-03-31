@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Intro Section
         siteHeader2: "Expertise für eine Vielzahl von Projekten",
         pleaseNote:
-          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
+          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         moreThan: "Mehr als",
         happyCustomer: "Zufriedene Kunden",
         projectsDone: "Bauvorhaben abgeschlossen",
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //   Intro Section Consulting
         pageIntroDescription:
           "Mit über 500 abgeschlossenen Projekten und mehr als 1.000 zufriedenen Kunden ist NEO Building Ihr zuverlässiger Partner für professionelle Beratungsdienste.",
-        siteHeader3: "Beratungsdienstleistungen",
+        siteHeader3: "Beratungsservice",
         pageIntroDescription2:
           "Wir haben mit renommierten Kunden zusammengearbeitet und erfolgreiche Projekte realisiert. Unsere Expertise garantiert, dass wir jede Herausforderung meistern und maßgeschneiderte Lösungen anbieten können. ",
         pageIntroDescription3:

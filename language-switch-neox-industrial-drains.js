@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Image Section Content
         filterAll: "Edelstahl Entwässerung",
         pleaseNote:
-          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
+          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         //   Image Titles
         descriptionImages:
           "Entdecken Sie unsere vielseitigen NEOX Industrie-Entwässerungssysteme, die aus hochwertigem Edelstahl gefertigt sind, um den Anforderungen verschiedenster Industrien gerecht zu werden.",

@@ -3898,3 +3898,54 @@ html {
   outline: 2px solid #0baf16; /* Add outline to links and buttons for better keyboard navigation */
   outline-offset: 2px;
 }
+
+/* Cookies Pop up */
+.cookie-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000;
+  display: none; /* Hidden by default, shown via JS if needed */
+  /* Initial glass-like state */
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+  backdrop-filter: blur(10px); /* Blur effect for glass look */
+  transition: all 0.3s ease; /* Smooth transition for changes */
+}
+
+.cookie-popup.scrolled {
+  /* State when user scrolls */
+  background-color: #fff; /* White background */
+  border-top: 4px solid #0baf16; /* Green top border */
+  backdrop-filter: none; /* Remove blur */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Shadow as before */
+}
+
+.cookie-popup .container {
+  max-width: 1140px; /* Matches Bootstrap's container max-width */
+  color: #333; /* Secondary color for text */
+  text-align: center; /* Centered text */
+}
+
+.cookie-popup p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cookie-popup .btn {
+  background-color: #0baf16; /* Accent color for button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto; /* Centers the button */
+}
+
+.cookie-popup .btn:hover {
+  background-color: #099112; /* Darker shade on hover */
+}
+/* End Cookie Pup Up  */

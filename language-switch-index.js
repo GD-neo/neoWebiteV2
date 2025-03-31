@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
         part2: "Industrial flooring", // Static translation for Industrieboden
         part3: "and",
       },
-      products: ["Industrial Drainages.", "Shower Enclosures.", "much more."],
+      products: ["Industrial Drainages.", "Glas Elements.", "much more."],
       competentHero: "Competence . Experience . Quality",
       constructionsNeox: {
         h2Stahl: "Steel Construction",
         pDescriptionNeox:
-          "From the modernisation of a production facility or industrial scullery's, over professional Kitchens to new development/construction sites. Drainage technology (Industrial Gutters/Drains and Shower Drains - 100% Stainless Steel), Stainless steel elements (Walls, Panelling, Stairs etc.), Profiles in stainless steel and much more.  ",
+          "From the modernisation of a production facility or industrial scullery's, over professional kitchens to new development/construction sites. Drainage technology (Industrial Gutters/Drains and Shower Drains - 100% Stainless Steel), Stainless steel elements (Walls, Panelling, Stairs etc.), Profiles in stainless steel and much more.  ",
         featureDrains: "Industrial Drainage",
         featureElements: "Stainless Steel Elements",
         featureShowerDrain: "Shower Drains",
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "Seamless transition to NEOXID<sup>®</sup> <a href='#featuresMore' class='custom-link'>industrial flooring</a>",
         featureDrainsPointThree2: "industrial flooring",
         // Edelstahl Bauelemente
-        featureElementsTitle: "Stainless Steel Komponents",
+        featureElementsTitle: "Stainless Steel Components",
         featureElementsDescription:
           "Complete stainless steel elements, including but not limited to:",
         featureElementPointOne:
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         descriptionMars:
           "5m high wall elements, new industrial flooring, new drains, new impact protection, and more.",
         descriptionPolaroid:
-          "50m of new drainage/gutters, new drains, new industrial flooring.",
+          "The work carried out by us: planning, removal/demolition of the old floor, manufacturing of new drains and channels (100% stainless steel) as well as their assembly/installation, and the application of a new industrial floor according to customer requirements.",
         // Go to references Call out
         projectExperience: "Project Experience",
         referencesDescription:
@@ -186,6 +186,8 @@ document.addEventListener("DOMContentLoaded", function () {
           "Industrial floors for production areas, kitchens, warehouses...</br>Offer high resistance to heat and chemicals (e.g., industrial cleaning agents)</br>Easy to clean thanks to seamless surfaces.",
         // Image Slider Title
         beforeAfterTitle: "Before | After",
+        // Gallery Selection at beginning of page
+        filterGalleryAll: "All",
       },
       imageTitleZoom:
         "For questions about specific products or if you need advice, you can reach us at info@neo-building.com or by phone at +49-221-95490929-0.",
@@ -201,11 +203,11 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       static: {
         part1: "Edelstahlbauelemente",
-        part2: "Industrieboden",
+        part2: "Industrieböden",
         part3: "und",
       },
-      products: ["Industrieentwässerung.", "Glasduschen.", "weiteres."],
-      competentHero: "Kompetez . Erfahrung . Qualität",
+      products: ["Industrieentwässerung.", "Glaselemente.", "weiteres."],
+      competentHero: "Kompetenz . Erfahrung . Qualität",
       constructionsNeox: {
         h2Stahl: "Edelstahlkonstruktion",
         pDescriptionNeox:
@@ -217,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Edelstahl Entwaesserung
         featureDrainsTitle: "Edelstahl Entwässerung",
         featureDrainsDescription:
-          "Edelstahl Entwässerungstechnologie für Produktionsräume, Lagerhallen, Spulräume/-küchen, Außenbereiche und mehr.",
+          "Edelstahl Entwässerungstechnologie für Produktionsräume, Lagerhallen, Spülräume/-küchen, Außenbereiche und mehr.",
         featureDrainsPointOne:
           "Rinnenkörper und Abläufe komplett aus Edelstahl",
         featureDrainsPointTwo: "Sonderanfertigungen als Standard",
@@ -264,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Link To Gallery Call Out
         imagesOfWork: "Bilder unserer Arbeiten",
         imagesOfWorkDescription:
-          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
+          "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         toGallery: "Zur Galerie",
         // Image Titles
         titleMarsNew: "Mars: Zustand Neu",
@@ -274,7 +276,7 @@ document.addEventListener("DOMContentLoaded", function () {
         descriptionMars:
           "5m hohe Wandelemente, neuer Industrieboden, neue Abläufe, neuer Rammschutz und weiteres.",
         descriptionPolaroid:
-          "50m neue Entwässerung/Rinnen, neue Abläufe, neuer Industrieboden.",
+          "Die durch uns durchgeführten Arbeiten: Planung, Entfernung/ Abtragen des Alten Bodens, Fertigung neuer Rinnen und Abläufe(100% Edelstahl) sowie deren Montage/Installation, Einbringung neuen Industriebodens gemäß Kundenwunsch.",
         // Go to references Call out
         projectExperience: "Projekt Erfahrung",
         referencesDescription:
@@ -370,6 +372,8 @@ document.addEventListener("DOMContentLoaded", function () {
         pDescriptionMore:
           "Industrieböden für Produktionflächen, Küchen, Lagerhallen...<br />Bieten hohe Widerstandsfähigkeit gegen Wärme und Chemikalien (Bspw.Industrielle-Reinigungsmittel) <br />Leichte Reinigung da keine Fugen vorhanden sind.",
         beforeAfterTitle: "Vorher | Nachher",
+        // Gallery Selection at beginning of page
+        filterGalleryAll: "Alle",
       },
       imageTitleZoom:
         "Bei Fragen zu einzelnen Produkten oder Beratungsbedarf erreichen Sie uns unter info@neo-building.com oder telefonisch unter +49-221-95490929-0",

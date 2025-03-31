@@ -66,6 +66,11 @@ const translations = {
         "You can find all the relevant information about our current offers here on this page.",
       popupLink: "Leave Current Website for Alcamo",
     },
+    cookiePopup: {
+      cookieText:
+        "This website uses cookies. If you continue to use this website, we assume your consent. <br /> NOTE: The visualizations on this website do not constitute an installation guide.",
+      agreeButton: " I Agree & Understand",
+    },
   },
   de: {
     meta: {
@@ -132,6 +137,11 @@ const translations = {
       popupText:
         "Sie finden alle relevanten Informationen zu unseren aktuellen Angeboten hier auf dieser Seite.",
       popupLink: "Website verlassen zu Alcamo",
+    },
+    cookiePopup: {
+      cookieText:
+        "Diese Website benutzt Cookies. Wenn Sie diese Website weiter nutzen, gehen wir von Ihrem Einverständnis aus. <br /> HINWEIS: Die Visualisierungen auf dieser Website stellen keine Einbauanleitung dar.",
+      agreeButton: "Zustimmen",
     },
   },
 };
@@ -269,6 +279,13 @@ function applyLanguage(lang) {
     const element = document.querySelector(`#${key}`);
     if (element) {
       element.innerText = translations[lang].overlay[key];
+    }
+  });
+  // Cookie Pop up translation
+  Object.keys(translations[lang].cookiePopup).forEach((key) => {
+    const element = document.querySelector(`#${key}`);
+    if (element) {
+      element.innerHTML = translations[lang].cookiePopup[key];
     }
   });
 }
