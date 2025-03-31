@@ -74,6 +74,14 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         }
       }
+      const classElement = document.querySelectorAll(`.${key}`);
+      if (classElement) {
+        if (typeof obj === "string") {
+          classElement.forEach((text) => {
+            text.innerHTML = obj;
+          });
+        }
+      }
     }
 
     // applyTranslation("meta", translations[currentLang].meta);
