@@ -23,11 +23,11 @@
 
 /* Staggered animation timings and durations */
 .row-1 .scroll-row {
-  animation-duration: 80s;
+  animation-duration: 65s;
 }
 
 .row-2 .scroll-row {
-  animation-duration: 85s;
+  animation-duration: 70s;
   animation-delay: -5s;
 }
 
@@ -37,12 +37,12 @@
 }
 
 .row-4 .scroll-row {
-  animation-duration: 83s;
+  animation-duration: 60s;
   animation-delay: -15s;
 }
 
 .row-5 .scroll-row {
-  animation-duration: 78s;
+  animation-duration: 57s;
   animation-delay: -20s;
 }
 
