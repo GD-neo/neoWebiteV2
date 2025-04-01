@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("img").forEach((img) => {
-    img.setAttribute("loading", "lazy");
+  document.querySelectorAll("img").forEach((e) => {
+    e.setAttribute("loading", "lazy");
   });
-  const dynamicText = document.getElementById("dynamic-text");
-
-  // Define translations for English and German
-  const translations = {
+  document.getElementById("dynamic-text");
+  const e = {
     en: {
       meta: {
         title: "Neo Building | References Images",
@@ -14,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
         keywords:
           "neo building, references, images, private customers, glas shower enclosures, neo building experience",
       },
-
       pageContent: {
         siteHeader: "Private Customers",
         siteCrum: "Private Customers",
@@ -56,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
         keywords:
           "neo building, referenzen, bilder, privat kunden, glasduschen, neo building erfahrung",
       },
-
       pageContent: {
         siteHeader: "Privatkunden",
         siteCrum: "Privatkunden",
@@ -91,66 +87,39 @@ document.addEventListener("DOMContentLoaded", function () {
         "Bei Fragen zu einzelnen Produkten oder Beratungsbedarf erreichen Sie uns unter info@neo-building.com oder telefonisch unter +49-221-95490929-0",
     },
   };
-  // Detect browser language and set default correctly
-  let browserLang = navigator.language || navigator.userLanguage;
-  let detectedLang = browserLang.includes("de") ? "de" : "en";
-  let storedLang = localStorage.getItem("language");
-  let currentLang = storedLang ? storedLang : detectedLang;
-  if (!storedLang) {
-    localStorage.setItem("language", currentLang);
-  }
-
-  let productIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  const typingSpeed = 200;
-  const pauseTime = 4000;
-  const deleteSpeed = 100;
-
-  let typeTimeout;
-
-  function updateStaticText() {
-    // Update the page title and meta description
-    document.title = translations[currentLang].meta.title;
-    const metaDescription = document.querySelector("meta[name='description']");
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        translations[currentLang].meta.description
-      );
-    }
-    function applyTranslation(key, obj) {
-      const element = document.querySelector(`#${key}`);
-      if (element) {
-        if (typeof obj === "string") {
-          element.innerHTML = obj;
-        } else if (typeof obj === "object") {
-          Object.keys(obj).forEach((subKey) => {
-            applyTranslation(subKey, obj[subKey]);
-          });
-        }
-      }
-    }
-
-    // applyTranslation("meta", translations[currentLang].meta);
-    applyTranslation("pageContent", translations[currentLang].pageContent);
-
-    let contactText = document.querySelectorAll(".contactText");
-    contactText.forEach(
-      (text) =>
-        (text.innerText = translations[currentLang].pageContent.contactText)
-    );
-    let descriptionShowers = document.querySelectorAll(".descriptionShower");
-    descriptionShowers.forEach((descriptionShower) => {
-      descriptionShower.innerText =
-        translations[currentLang].pageContent.descriptionShower;
-    });
-    let descriptionMirrors = document.querySelectorAll(".descriptionMirror");
-    descriptionMirrors.forEach((descriptionMirror) => {
-      descriptionMirror.innerText =
-        translations[currentLang].pageContent.descriptionMirror;
-    });
-    const glightbox = GLightbox({
+  let t = (navigator.language || navigator.userLanguage).includes("de")
+      ? "de"
+      : "en",
+    n = localStorage.getItem("language"),
+    r = n || t;
+  n || localStorage.setItem("language", r);
+  let o = 0,
+    i = 0,
+    a = !1;
+  function s() {
+    document.title = e[r].meta.title;
+    const t = document.querySelector("meta[name='description']");
+    t && t.setAttribute("content", e[r].meta.description),
+      (function e(t, n) {
+        const r = document.querySelector(`#${t}`);
+        r &&
+          ("string" == typeof n
+            ? (r.innerHTML = n)
+            : "object" == typeof n &&
+              Object.keys(n).forEach((t) => {
+                e(t, n[t]);
+              }));
+      })("pageContent", e[r].pageContent),
+      document
+        .querySelectorAll(".contactText")
+        .forEach((t) => (t.innerText = e[r].pageContent.contactText)),
+      document.querySelectorAll(".descriptionShower").forEach((t) => {
+        t.innerText = e[r].pageContent.descriptionShower;
+      }),
+      document.querySelectorAll(".descriptionMirror").forEach((t) => {
+        t.innerText = e[r].pageContent.descriptionMirror;
+      });
+    GLightbox({
       selector: ".glightbox",
       openEffect: "zoom",
       closeEffect: "fade",
@@ -161,72 +130,41 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.removeAttribute("inert");
       },
     });
-
-    // Function to update the image title
-    function updateImageTitle() {
+    function n() {
       setTimeout(() => {
-        let imageTitles = document.querySelectorAll(".gslide-title"); // Refresh elements
-        imageTitles.forEach((imageTitle) => {
-          imageTitle.innerText = translations[currentLang].imageTitleZoom;
+        document.querySelectorAll(".gslide-title").forEach((t) => {
+          t.innerText = e[r].imageTitleZoom;
         });
-      }, 100); // Small delay for rendering
+      }, 100);
     }
-    document.addEventListener("keydown", function (event) {
-      // Check if the right arrow key (ArrowRight) is pressed
-      if (event.key === "ArrowRight") {
-        updateImageTitle();
-      }
-      // Check if the left arrow key (ArrowLeft) is pressed
-      if (event.key === "ArrowLeft") {
-        updateImageTitle();
-      }
+    document.addEventListener("keydown", function (e) {
+      "ArrowRight" === e.key && n(), "ArrowLeft" === e.key && n();
     });
-    // Observer to detect when Lightbox content changes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (
-          mutation.type === "attributes" &&
-          mutation.target.getAttribute("aria-hidden") === "false"
-        ) {
-          updateImageTitle(); // Update text only when visible
-        }
+    const o = new MutationObserver((e) => {
+        e.forEach((e) => {
+          "attributes" === e.type &&
+            "false" === e.target.getAttribute("aria-hidden") &&
+            n();
+        });
+      }),
+      i = document.querySelector(".glightbox-container");
+    i && o.observe(i, { attributes: !0, subtree: !0 }),
+      document.querySelectorAll(".preview-link").forEach((e) => {
+        e.addEventListener("click", n);
+      }),
+      document.addEventListener("click", (e) => {
+        e.target.closest(".gnext, .gprev") && n();
       });
-    });
-
-    // Start observing changes in the lightbox container
-    const lightboxContainer = document.querySelector(".glightbox-container");
-    if (lightboxContainer) {
-      observer.observe(lightboxContainer, { attributes: true, subtree: true });
-    }
-
-    // Event listeners for clicking images and navigation buttons
-    document.querySelectorAll(".preview-link").forEach((link) => {
-      link.addEventListener("click", updateImageTitle);
-    });
-
-    document.addEventListener("click", (event) => {
-      if (event.target.closest(".gnext, .gprev")) {
-        updateImageTitle();
-      }
-    });
-
-    // console.log(nextPrevButtons);
-    // console.log(imageLinks);
   }
-
-  updateStaticText();
-
-  function switchLanguage() {
-    currentLang = currentLang === "en" ? "de" : "en";
-    localStorage.setItem("language", currentLang);
-    productIndex = 0;
-    charIndex = 0;
-    isDeleting = false;
-
-    updateStaticText();
-  }
-
-  document.getElementById("toggle-lang").addEventListener("click", function () {
-    switchLanguage();
-  });
+  s(),
+    document
+      .getElementById("toggle-lang")
+      .addEventListener("click", function () {
+        (r = "en" === r ? "de" : "en"),
+          localStorage.setItem("language", r),
+          (o = 0),
+          (i = 0),
+          (a = !1),
+          s();
+      });
 });

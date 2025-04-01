@@ -1,35 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const popup = document.getElementById("cookiePopup");
-  const agreeButton = document.getElementById("agreeButton");
-
-  // Check cookie agreement
-  const agreement = localStorage.getItem("cookieAgreement");
-  const agreementTimestamp = localStorage.getItem("cookieAgreementTimestamp");
-  const fourteenDays = 14 * 24 * 60 * 60 * 1000; // 14 days in milliseconds
-  const now = new Date().getTime();
-
-  if (
-    !agreement ||
-    !agreementTimestamp ||
-    now - agreementTimestamp > fourteenDays
-  ) {
-    popup.style.display = "block";
-  }
-
-  // Handle button click
-  agreeButton.addEventListener("click", function () {
-    localStorage.setItem("cookieAgreement", "true");
-    localStorage.setItem("cookieAgreementTimestamp", now);
-    popup.style.display = "none";
-  });
-
-  // Handle scroll event
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-      // Trigger after scrolling 50px
-      popup.classList.add("scrolled");
-    } else {
-      popup.classList.remove("scrolled");
-    }
-  });
+  const e = document.getElementById("cookiePopup"),
+    t = document.getElementById("agreeButton"),
+    o = localStorage.getItem("cookieAgreement"),
+    n = localStorage.getItem("cookieAgreementTimestamp"),
+    l = new Date().getTime();
+  (!o || !n || l - n > 12096e5) && (e.style.display = "block"),
+    t.addEventListener("click", function () {
+      localStorage.setItem("cookieAgreement", "true"),
+        localStorage.setItem("cookieAgreementTimestamp", l),
+        (e.style.display = "none");
+    }),
+    window.addEventListener("scroll", function () {
+      window.scrollY > 50
+        ? e.classList.add("scrolled")
+        : e.classList.remove("scrolled");
+    });
 });

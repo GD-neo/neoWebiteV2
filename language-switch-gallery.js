@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("img").forEach((img) => {
-    img.setAttribute("loading", "lazy");
+  document.querySelectorAll("img").forEach((e) => {
+    e.setAttribute("loading", "lazy");
   });
-  const dynamicText = document.getElementById("dynamic-text");
-  document.querySelectorAll("img").forEach((img) => {
-    img.setAttribute("loading", "lazy");
+  document.getElementById("dynamic-text");
+  document.querySelectorAll("img").forEach((e) => {
+    e.setAttribute("loading", "lazy");
   });
-  // Define translations for English and German
-  const translations = {
+  const e = {
     en: {
       meta: {
         title: "Neo Building | References Images",
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
         keywords:
           "neo building, references, images, private customers, glas shower enclosures, neo building experience",
       },
-
       pageContent: {
         siteHeader: "Gallery",
         siteCrum: "Gallery",
@@ -36,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
         titlePolaroidNew: "Polaroid: New",
         titleMarsConstruction: "Mars: Construction",
         titlePolaroidConstruction: "Polaroid: Construction",
-        // Text for Image Slider
         textPolaroid:
           "Scope of work carried out by us: 50m of new drainage/gutters, new drains, new industrial flooring, new grating.",
         textMars:
@@ -53,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
         keywords:
           "neo building, referenzen, bilder, privat kunden, glasduschen, neo building erfahrung",
       },
-
       pageContent: {
         siteHeader: "Galerie",
         siteCrum: "Bilder",
@@ -73,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
         titlePolaroidNew: "Polaroid: Zustand Neu",
         titleMarsConstruction: "Mars: Montage",
         titlePolaroidConstruction: "Polaroid: Montage",
-        // Text for Image sliders
         textPolaroid:
           "Umfang der von uns durchgeführten Arbeiten: 50m neue Entwässerung/Rinnen, neue Abläufe, neuer Industrieboden, neue Gitterroste.",
         textMars:
@@ -83,105 +78,60 @@ document.addEventListener("DOMContentLoaded", function () {
         "Bei Fragen zu einzelnen Produkten oder Beratungsbedarf erreichen Sie uns unter info@neo-building.com oder telefonisch unter +49-221-95490929-0",
     },
   };
-  // Detect browser language and set default correctly
-  let browserLang = navigator.language || navigator.userLanguage;
-  let detectedLang = browserLang.includes("de") ? "de" : "en";
-  let storedLang = localStorage.getItem("language");
-  let currentLang = storedLang ? storedLang : detectedLang;
-  if (!storedLang) {
-    localStorage.setItem("language", currentLang);
-  }
-
-  let productIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  const typingSpeed = 200;
-  const pauseTime = 4000;
-  const deleteSpeed = 100;
-
-  let typeTimeout;
-
-  function updateStaticText() {
-    // Update the page title and meta description
-    document.title = translations[currentLang].meta.title;
-    const metaDescription = document.querySelector("meta[name='description']");
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        translations[currentLang].meta.description
-      );
-    }
-    function applyTranslation(key, obj) {
-      const element = document.querySelector(`#${key}`);
-      if (element) {
-        if (typeof obj === "string") {
-          element.innerHTML = obj;
-        } else if (typeof obj === "object") {
-          Object.keys(obj).forEach((subKey) => {
-            applyTranslation(subKey, obj[subKey]);
+  let t = (navigator.language || navigator.userLanguage).includes("de")
+      ? "de"
+      : "en",
+    n = localStorage.getItem("language"),
+    o = n || t;
+  n || localStorage.setItem("language", o);
+  let r = 0,
+    i = 0,
+    a = !1;
+  function s() {
+    document.title = e[o].meta.title;
+    const t = document.querySelector("meta[name='description']");
+    t && t.setAttribute("content", e[o].meta.description),
+      (function e(t, n) {
+        const o = document.querySelector(`#${t}`);
+        o &&
+          ("string" == typeof n
+            ? (o.innerHTML = n)
+            : "object" == typeof n &&
+              Object.keys(n).forEach((t) => {
+                e(t, n[t]);
+              }));
+        const r = document.querySelectorAll(`.${t}`);
+        r &&
+          "string" == typeof n &&
+          r.forEach((e) => {
+            e.innerHTML = n;
           });
-        }
-      }
-      const classElement = document.querySelectorAll(`.${key}`);
-      if (classElement) {
-        if (typeof obj === "string") {
-          classElement.forEach((text) => {
-            text.innerHTML = obj;
-          });
-        }
-      }
-    }
-
-    // applyTranslation("meta", translations[currentLang].meta);
-    applyTranslation("pageContent", translations[currentLang].pageContent);
-
-    let contactText = document.querySelectorAll(".contactText");
-    contactText.forEach(
-      (text) =>
-        (text.innerText = translations[currentLang].pageContent.contactText)
-    );
-    let descriptionHotels = document.querySelectorAll(".descriptionHotels");
-    descriptionHotels.forEach((descriptionHotel) => {
-      descriptionHotel.innerText =
-        translations[currentLang].pageContent.descriptionHotels;
-    });
-    let descriptionPolaroids = document.querySelectorAll(
-      ".descriptionPolaroid"
-    );
-    descriptionPolaroids.forEach((descriptionPolaroid) => {
-      descriptionPolaroid.innerText =
-        translations[currentLang].pageContent.descriptionPolaroid;
-    });
-    let descriptionMarss = document.querySelectorAll(".descriptionMars");
-    descriptionMarss.forEach((descriptionMars) => {
-      descriptionMars.innerText =
-        translations[currentLang].pageContent.descriptionMars;
-    });
-    let titleMarsNews = document.querySelectorAll(".titleMarsNew");
-    titleMarsNews.forEach((titleMarsNew) => {
-      titleMarsNew.innerText =
-        translations[currentLang].pageContent.titleMarsNew;
-    });
-    let titlePolaroidNews = document.querySelectorAll(".titlePolaroidNew");
-    titlePolaroidNews.forEach((titlePolaroidNew) => {
-      titlePolaroidNew.innerText =
-        translations[currentLang].pageContent.titlePolaroidNew;
-    });
-    let titleMarsConstructions = document.querySelectorAll(
-      ".titleMarsConstruction"
-    );
-    titleMarsConstructions.forEach((titleMarsConstruction) => {
-      titleMarsConstruction.innerText =
-        translations[currentLang].pageContent.titleMarsConstruction;
-    });
-    let titlePolaroidConstructions = document.querySelectorAll(
-      ".titlePolaroidConstruction"
-    );
-    titlePolaroidConstructions.forEach((titlePolaroidConstruction) => {
-      titlePolaroidConstruction.innerText =
-        translations[currentLang].pageContent.titlePolaroidConstruction;
-    });
-    const glightbox = GLightbox({
+      })("pageContent", e[o].pageContent),
+      document
+        .querySelectorAll(".contactText")
+        .forEach((t) => (t.innerText = e[o].pageContent.contactText)),
+      document.querySelectorAll(".descriptionHotels").forEach((t) => {
+        t.innerText = e[o].pageContent.descriptionHotels;
+      }),
+      document.querySelectorAll(".descriptionPolaroid").forEach((t) => {
+        t.innerText = e[o].pageContent.descriptionPolaroid;
+      }),
+      document.querySelectorAll(".descriptionMars").forEach((t) => {
+        t.innerText = e[o].pageContent.descriptionMars;
+      }),
+      document.querySelectorAll(".titleMarsNew").forEach((t) => {
+        t.innerText = e[o].pageContent.titleMarsNew;
+      }),
+      document.querySelectorAll(".titlePolaroidNew").forEach((t) => {
+        t.innerText = e[o].pageContent.titlePolaroidNew;
+      }),
+      document.querySelectorAll(".titleMarsConstruction").forEach((t) => {
+        t.innerText = e[o].pageContent.titleMarsConstruction;
+      }),
+      document.querySelectorAll(".titlePolaroidConstruction").forEach((t) => {
+        t.innerText = e[o].pageContent.titlePolaroidConstruction;
+      });
+    GLightbox({
       selector: ".glightbox",
       openEffect: "zoom",
       closeEffect: "fade",
@@ -192,72 +142,41 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.removeAttribute("inert");
       },
     });
-
-    // Function to update the image title
-    function updateImageTitle() {
+    function n() {
       setTimeout(() => {
-        let imageTitles = document.querySelectorAll(".gslide-title"); // Refresh elements
-        imageTitles.forEach((imageTitle) => {
-          imageTitle.innerText = translations[currentLang].imageTitleZoom;
+        document.querySelectorAll(".gslide-title").forEach((t) => {
+          t.innerText = e[o].imageTitleZoom;
         });
-      }, 100); // Small delay for rendering
+      }, 100);
     }
-    document.addEventListener("keydown", function (event) {
-      // Check if the right arrow key (ArrowRight) is pressed
-      if (event.key === "ArrowRight") {
-        updateImageTitle();
-      }
-      // Check if the left arrow key (ArrowLeft) is pressed
-      if (event.key === "ArrowLeft") {
-        updateImageTitle();
-      }
+    document.addEventListener("keydown", function (e) {
+      "ArrowRight" === e.key && n(), "ArrowLeft" === e.key && n();
     });
-    // Observer to detect when Lightbox content changes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (
-          mutation.type === "attributes" &&
-          mutation.target.getAttribute("aria-hidden") === "false"
-        ) {
-          updateImageTitle(); // Update text only when visible
-        }
+    const r = new MutationObserver((e) => {
+        e.forEach((e) => {
+          "attributes" === e.type &&
+            "false" === e.target.getAttribute("aria-hidden") &&
+            n();
+        });
+      }),
+      i = document.querySelector(".glightbox-container");
+    i && r.observe(i, { attributes: !0, subtree: !0 }),
+      document.querySelectorAll(".preview-link").forEach((e) => {
+        e.addEventListener("click", n);
+      }),
+      document.addEventListener("click", (e) => {
+        e.target.closest(".gnext, .gprev") && n();
       });
-    });
-
-    // Start observing changes in the lightbox container
-    const lightboxContainer = document.querySelector(".glightbox-container");
-    if (lightboxContainer) {
-      observer.observe(lightboxContainer, { attributes: true, subtree: true });
-    }
-
-    // Event listeners for clicking images and navigation buttons
-    document.querySelectorAll(".preview-link").forEach((link) => {
-      link.addEventListener("click", updateImageTitle);
-    });
-
-    document.addEventListener("click", (event) => {
-      if (event.target.closest(".gnext, .gprev")) {
-        updateImageTitle();
-      }
-    });
-
-    // console.log(nextPrevButtons);
-    // console.log(imageLinks);
   }
-
-  updateStaticText();
-
-  function switchLanguage() {
-    currentLang = currentLang === "en" ? "de" : "en";
-    localStorage.setItem("language", currentLang);
-    productIndex = 0;
-    charIndex = 0;
-    isDeleting = false;
-
-    updateStaticText();
-  }
-
-  document.getElementById("toggle-lang").addEventListener("click", function () {
-    switchLanguage();
-  });
+  s(),
+    document
+      .getElementById("toggle-lang")
+      .addEventListener("click", function () {
+        (o = "en" === o ? "de" : "en"),
+          localStorage.setItem("language", o),
+          (r = 0),
+          (i = 0),
+          (a = !1),
+          s();
+      });
 });

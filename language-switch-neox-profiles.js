@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("img").forEach((img) => {
-    img.setAttribute("loading", "lazy");
+  document.querySelectorAll("img").forEach((e) => {
+    e.setAttribute("loading", "lazy");
   });
-  const dynamicText = document.getElementById("dynamic-text");
-  document.querySelectorAll("img").forEach((img) => {
-    img.setAttribute("loading", "lazy");
+  document.getElementById("dynamic-text");
+  document.querySelectorAll("img").forEach((e) => {
+    e.setAttribute("loading", "lazy");
   });
-  // Define translations for English and German
-  const translations = {
+  const e = {
     en: {
       meta: {
         title:
@@ -17,12 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
         keywords:
           "NEOX stainless steel profiles, stainless steel profiles Cologne, stainless steel profiles Germany, custom stainless steel profiles, made-to-measure stainless steel profiles, NEO Building, stainless steel U-profiles, stainless steel T90 profiles, stainless steel tile profiles, PVD coating stainless steel, stainless steel profiles for construction projects, quality stainless steel profiles, custom-made stainless steel profiles, stainless steel profiles for architecture, professional stainless steel profile consulting, stainless steel profiles for industrial applications",
       },
-
       pageContent: {
         siteHeader: "Profiles",
         siteCrum: "NEOX",
         siteHeader2: "We bring your ideas to life!",
-        // Page Intro
         pageIntroHeader: "Profiles made of stainless steel",
         pageIntroDescription:
           "NEOX stainless steel profiles are manufactured with the highest standards and customized to the desired dimensions of our customers.",
@@ -35,23 +32,18 @@ document.addEventListener("DOMContentLoaded", function () {
         pageIntroDescription3:
           "We offer various solutions for profiles tailored to your needs and planning.",
         pageInroToGallery: "View Images",
-        // Call to action references
         callToActionHeader: "Project Experience",
         callToActionDescription:
           "We set extremely high standards for the materials we use, as well as for the shape and functionality of our products. The design of our products is timeless. Our goal has always been, and continues to be, to ensure that you enjoy our products for many years to come. All of our products are designed in-house: from the prototype to series production, including extensive testing to guarantee lasting value and reliability.",
         callToActionLink: "References",
-
-        //   Call to action examples
         callToActionHeaderExamples: "We find the solution for your ideas!",
         callToActionDescriptionExamples:
           "In addition to our commitment to project business, we have always offered our products to private clients. Benefit from our years of experience in realizing your private construction project. We bring your ideas for a personalized design in space to life. With the highest precision. With products developed by us. Exclusively manufactured in Germany.",
         callToActionLinkExamples: "References",
-        //   Call to action gallery
         callToActionHeaderGallery: "Further Insights",
         callToActionDescriptionGallery:
           "They say a picture is worth a thousand words. Here, each one speaks of dedication, innovation, and the beauty of precise craftsmanship.",
         callToActionLinkGallery: "Gallery",
-        // Image Section Content
         filterAll: "All",
         filterDrains: "Drains",
         pleaseNote:
@@ -66,16 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
           "Stainless steel drains, available in 3 basic variants.",
         goToProjects: "References",
         goToPrivate: "Start inquiry",
-        // more info buttons
         moreInfo: "Learn more",
       },
       constructionsNeoxProfiles: {
         h2Glas: "Overview",
         pageIntroDescription4:
           "If you do not find what you are looking for in our standard profiles or would like to have your own profile manufactured, contact us. We will find the solution for your ideas.",
-        // Feature Section
         featureMore: "Profil DF",
-        // NEOX Profil U
         featureProfilUTitle:
           "<span class='custom-green'>NEO</span>X Profil U made of stainless steel",
         featureProfilUtoVideo:
@@ -91,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
         featureProfilUPointFive:
           "High-quality stainless steel U-profile with a brilliant surface",
         featureProfilUPointSix: "PVD coating available on request",
-        // NEOX Profil UW nicht U
         featureProfilUWTitle:
           "<span class='custom-green'>NEO</span>X Profil UW made of stainless steel",
         featureProfilUWtoVideo:
@@ -104,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "No sharp edges at the profile-to-glass transition (edges turned over)",
         featureProfilUWPointFour: "For wall and floor installation",
         featureProfilUWPointFive: "Custom designs/special sizes available",
-        // NEOX Profil T90
         featureProfilT90Title:
           "<span class='custom-green'>NEO</span>X Profil T90 made of stainless steel",
         featureProfilT90toVideo:
@@ -116,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
         featureProfilT90PointFive:
           "Brilliant appearance with polished stainless steel",
         featureProfilT90PointSix: "Also perfectly suitable for door frames",
-        // NEOX Profil DF
         featureProfilDFTitle:
           "<span class='custom-green'>NEO</span>X Profil DF made of stainless steel",
         featureProfilDFPointOne:
@@ -124,7 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
         featureProfilDFPointTwo:
           "High-quality composite material between the stainless steel elements",
         featureProfilDFPointThree: "Custom fabrications/custom sizes available",
-        // NEOX profile Slider Section
         siteHeaderSlider: "Images",
         sliderFilterMore: "More",
         titleSliderU: "NEOX U-profile made of stainless steel",
@@ -146,12 +131,10 @@ document.addEventListener("DOMContentLoaded", function () {
         keywords:
           "NEOX Edelstahlprofile, Edelstahlprofile Köln, Edelstahlprofile Deutschland, maßgefertigte Edelstahlprofile, Edelstahlprofile nach Maß, NEO Building, Edelstahl U-Profile, Edelstahl T90 Profile, Fliesenprofile aus Edelstahl, PVD-Beschichtung Edelstahl, Edelstahlprofile für Bauprojekte, Qualitäts Edelstahlprofile, Sonderanfertigungen Edelstahlprofile, Edelstahlprofile für Architektur, professionelle Beratung Edelstahlprofile, Edelstahlprofile für Industrieanwendungen",
       },
-
       pageContent: {
         siteHeader: "Profile",
         siteCrum: "NEOX",
         siteHeader2: "Wir finden die Lösung für Ihre Ideen!",
-        // Page Intro
         pageIntroHeader: "Profile aus Edelstahl",
         pageIntroDescription:
           "NEOX Profile aus Edelstahl werden mit höchsten Ansprüchen gefertigt und an die gewünschten Dimensionen unserer Kunden angepasst.",
@@ -164,32 +147,23 @@ document.addEventListener("DOMContentLoaded", function () {
         pageIntroDescription3:
           "Wir bieten Ihnen verschiedene Lösungen für Profile ganz auf Ihre Bedürfnisse und Planung zugeschnitten.",
         pageInroToGallery: "Bilder Ansehen",
-        // Call to action references
         callToActionHeader: "Projekt Erfahrung",
         callToActionDescription:
           "Wir stellen extrem hohe Anforderungen an das von uns verwendete Material, an die Form und die Funktionalität. Das Design unserer Produkte ist zeitlos. Unser Ziel war und ist es, dass Sie viele Jahre Freude an unseren Produkten haben. Alle Produkte werden von uns selbst konstruiert: vom Prototyp bis zur Serienreife, mit umfangreichen Tests, damit die Produkte Ihnen wirklich nachhaltigen Nutzen bringen.",
         callToActionLink: "Referenzen",
-
-        //   Call to action examples
         callToActionHeaderExamples: "Wir finden die Lösung für Ihre Ideen!",
         callToActionDescriptionExamples:
           "Nutzen sie unsere langjährige Erfahrung für die Realisierung Ihres Bauvorhabens. Wir lassen Ihre Ideen für eine individuelle Gestaltung im Raum Realität werden. Mit höchster Präzision. Mit von uns entwickelten Produkten. Ausschließlich in Deutschland gefertigt.",
         callToActionLinkExamples: "Referenzen",
-
-        //   Call to action examples
         callToActionHeaderExamples: "Wir finden die Lösung für Ihre Ideen!",
         callToActionDescriptionExamples:
           "Nutzen sie unsere langjährige Erfahrung für die Realisierung Ihres Bauvorhabens. Wir lassen Ihre Ideen für eine individuelle Gestaltung im Raum Realität werden. Mit höchster Präzision. Mit von uns entwickelten Produkten. Ausschließlich in Deutschland gefertigt.",
-        //   Call to action gallery
         callToActionHeaderGallery: "Weitere Einblicke",
         callToActionDescriptionGallery:
           "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         callToActionLinkGallery: "Galerie",
-
-        // Image Section Content
         filterAll: "Alle",
         filterDrains: "Abläufe",
-
         pleaseNote:
           "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         descriptionChannelE:
@@ -205,16 +179,13 @@ document.addEventListener("DOMContentLoaded", function () {
         titleChannelX: "Channel X",
         titleChannelS: "Channel S",
         titleChannelDrains: "Abläufe",
-        // more Link
         moreInfo: "Mehr Erfahren",
       },
       constructionsNeoxProfiles: {
         h2Glas: "Übersicht",
         pageIntroDescription4:
           "Sollten Sie bei unseren Standard Profilen nicht fündig werden oder Ihr eigenes Profil fertigen lassen wollen, kontaktieren Sie uns. Wir finden die Lösung für Ihre Ideen.",
-        // Feature Section
         featureMore: "Profil DF",
-        // NEOX Profil U
         featureProfilUTitle:
           "<span class='custom-green'>NEO</span>X Profil U aus Edelstahl",
         featureProfilUtoVideo: "Profil U aus Edelstahl Visualisierug - Video",
@@ -229,7 +200,6 @@ document.addEventListener("DOMContentLoaded", function () {
         featureProfilUPointFive:
           "Hochwertiges Edelstahl U-Profil mit brillanter Oberfläche",
         featureProfilUPointSix: "PVD-Beschichtung auf Wunsch möglich",
-        // NEOX Profil UW nicht U
         featureProfilUWTitle:
           "<span class='custom-green'>NEO</span>X Profil UW aus Edelstahl",
         featureProfilUWtoVideo: "Profil UW aus Edelstahl Visualisierug - Video",
@@ -241,7 +211,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "Keine scharfen Kanten beim Übergang Profil zu Glas (Kanten umbördelt)",
         featureProfilUWPointFour: "Für Wand- und Bodenmontage",
         featureProfilUWPointFive: "Sonderanfertigungen/Sondermaße möglich",
-        // NEOX Profil T90
         featureProfilT90Title:
           "<span class='custom-green'>NEO</span>X Profil T90 aus Edelstahl",
         featureProfilT90toVideo:
@@ -253,14 +222,12 @@ document.addEventListener("DOMContentLoaded", function () {
         featureProfilT90PointFour: "Leicht zu montieren",
         featureProfilT90PointFive: "Brillante Optik durch polierten Edelstahl",
         featureProfilT90PointSix: "Auch für Türlaibungen hervorragend geeignet",
-        // NEOX Profil DF
         featureProfilDFTitle:
           "<span class='custom-green'>NEO</span>X Profil DF aus Edelstahl",
         featureProfilDFPointOne: "Dehnfugen-Profil aus Edelstahl",
         featureProfilDFPointTwo:
           "Hochwertiger Verbundwerkstoff zwischen den Edelstahlelementen",
         featureProfilDFPointThree: "Sonderanfertigungen/Sondermaße möglich",
-        // NEOX profile Slider Section
         siteHeaderSlider: "Bilder",
         sliderFilterMore: "Weitere",
         titleSliderU: "NEOX Profil U aus Edelstahl",
@@ -274,109 +241,62 @@ document.addEventListener("DOMContentLoaded", function () {
         "Bei Fragen zu einzelnen Produkten oder Beratungsbedarf erreichen Sie uns unter info@neo-building.com oder telefonisch unter +49-221-95490929-0",
     },
   };
-  // Detect browser language and set default correctly
-  let browserLang = navigator.language || navigator.userLanguage;
-  let detectedLang = browserLang.includes("de") ? "de" : "en";
-  let storedLang = localStorage.getItem("language");
-  let currentLang = storedLang ? storedLang : detectedLang;
-  if (!storedLang) {
-    localStorage.setItem("language", currentLang);
-  }
-
-  let productIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  const typingSpeed = 200;
-  const pauseTime = 4000;
-  const deleteSpeed = 100;
-
-  let typeTimeout;
-
-  function updateStaticText() {
-    // Update the page title and meta description
-    document.title = translations[currentLang].meta.title;
-    const metaDescription = document.querySelector("meta[name='description']");
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        translations[currentLang].meta.description
-      );
+  let t = (navigator.language || navigator.userLanguage).includes("de")
+      ? "de"
+      : "en",
+    i = localStorage.getItem("language"),
+    n = i || t;
+  i || localStorage.setItem("language", n);
+  let r = 0,
+    o = 0,
+    l = !1;
+  function s() {
+    document.title = e[n].meta.title;
+    const t = document.querySelector("meta[name='description']");
+    function i(e, t) {
+      const n = document.querySelector(`#${e}`);
+      n &&
+        ("string" == typeof t
+          ? (n.innerHTML = t)
+          : "object" == typeof t &&
+            Object.keys(t).forEach((e) => {
+              i(e, t[e]);
+            }));
+      const r = document.querySelectorAll(`.${e}`);
+      r &&
+        "string" == typeof t &&
+        r.forEach((e) => {
+          e.innerHTML = t;
+        });
     }
-    function applyTranslation(key, obj) {
-      const element = document.querySelector(`#${key}`);
-      if (element) {
-        if (typeof obj === "string") {
-          element.innerHTML = obj;
-        } else if (typeof obj === "object") {
-          Object.keys(obj).forEach((subKey) => {
-            applyTranslation(subKey, obj[subKey]);
-          });
-        }
-      }
-      const classElement = document.querySelectorAll(`.${key}`);
-      if (classElement) {
-        if (typeof obj === "string") {
-          classElement.forEach((text) => {
-            text.innerHTML = obj;
-          });
-        }
-      }
-    }
-
-    // applyTranslation("meta", translations[currentLang].meta);
-    applyTranslation("pageContent", translations[currentLang].pageContent);
-    applyTranslation(
-      "constructionsNeoxProfiles",
-      translations[currentLang].constructionsNeoxProfiles
-    );
-
-    let contactText = document.querySelectorAll(".contactText");
-    contactText.forEach(
-      (text) =>
-        (text.innerText = translations[currentLang].pageContent.contactText)
-    );
-    let descriptionHotels = document.querySelectorAll(".descriptionHotels");
-    descriptionHotels.forEach((descriptionHotel) => {
-      descriptionHotel.innerText =
-        translations[currentLang].pageContent.descriptionHotels;
-    });
-    let descriptionPolaroids = document.querySelectorAll(
-      ".descriptionPolaroid"
-    );
-    descriptionPolaroids.forEach((descriptionPolaroid) => {
-      descriptionPolaroid.innerText =
-        translations[currentLang].pageContent.descriptionPolaroid;
-    });
-    let descriptionMarss = document.querySelectorAll(".descriptionMars");
-    descriptionMarss.forEach((descriptionMars) => {
-      descriptionMars.innerText =
-        translations[currentLang].pageContent.descriptionMars;
-    });
-    let titleMarsNews = document.querySelectorAll(".titleMarsNew");
-    titleMarsNews.forEach((titleMarsNew) => {
-      titleMarsNew.innerText =
-        translations[currentLang].pageContent.titleMarsNew;
-    });
-    let titlePolaroidNews = document.querySelectorAll(".titlePolaroidNew");
-    titlePolaroidNews.forEach((titlePolaroidNew) => {
-      titlePolaroidNew.innerText =
-        translations[currentLang].pageContent.titlePolaroidNew;
-    });
-    let titleMarsConstructions = document.querySelectorAll(
-      ".titleMarsConstruction"
-    );
-    titleMarsConstructions.forEach((titleMarsConstruction) => {
-      titleMarsConstruction.innerText =
-        translations[currentLang].pageContent.titleMarsConstruction;
-    });
-    let titlePolaroidConstructions = document.querySelectorAll(
-      ".titlePolaroidConstruction"
-    );
-    titlePolaroidConstructions.forEach((titlePolaroidConstruction) => {
-      titlePolaroidConstruction.innerText =
-        translations[currentLang].pageContent.titlePolaroidConstruction;
-    });
-    const glightbox = GLightbox({
+    t && t.setAttribute("content", e[n].meta.description),
+      i("pageContent", e[n].pageContent),
+      i("constructionsNeoxProfiles", e[n].constructionsNeoxProfiles),
+      document
+        .querySelectorAll(".contactText")
+        .forEach((t) => (t.innerText = e[n].pageContent.contactText)),
+      document.querySelectorAll(".descriptionHotels").forEach((t) => {
+        t.innerText = e[n].pageContent.descriptionHotels;
+      }),
+      document.querySelectorAll(".descriptionPolaroid").forEach((t) => {
+        t.innerText = e[n].pageContent.descriptionPolaroid;
+      }),
+      document.querySelectorAll(".descriptionMars").forEach((t) => {
+        t.innerText = e[n].pageContent.descriptionMars;
+      }),
+      document.querySelectorAll(".titleMarsNew").forEach((t) => {
+        t.innerText = e[n].pageContent.titleMarsNew;
+      }),
+      document.querySelectorAll(".titlePolaroidNew").forEach((t) => {
+        t.innerText = e[n].pageContent.titlePolaroidNew;
+      }),
+      document.querySelectorAll(".titleMarsConstruction").forEach((t) => {
+        t.innerText = e[n].pageContent.titleMarsConstruction;
+      }),
+      document.querySelectorAll(".titlePolaroidConstruction").forEach((t) => {
+        t.innerText = e[n].pageContent.titlePolaroidConstruction;
+      });
+    GLightbox({
       selector: ".glightbox",
       openEffect: "zoom",
       closeEffect: "fade",
@@ -387,72 +307,41 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.removeAttribute("inert");
       },
     });
-
-    // Function to update the image title
-    function updateImageTitle() {
+    function r() {
       setTimeout(() => {
-        let imageTitles = document.querySelectorAll(".gslide-title"); // Refresh elements
-        imageTitles.forEach((imageTitle) => {
-          imageTitle.innerText = translations[currentLang].imageTitleZoom;
+        document.querySelectorAll(".gslide-title").forEach((t) => {
+          t.innerText = e[n].imageTitleZoom;
         });
-      }, 100); // Small delay for rendering
+      }, 100);
     }
-    document.addEventListener("keydown", function (event) {
-      // Check if the right arrow key (ArrowRight) is pressed
-      if (event.key === "ArrowRight") {
-        updateImageTitle();
-      }
-      // Check if the left arrow key (ArrowLeft) is pressed
-      if (event.key === "ArrowLeft") {
-        updateImageTitle();
-      }
+    document.addEventListener("keydown", function (e) {
+      "ArrowRight" === e.key && r(), "ArrowLeft" === e.key && r();
     });
-    // Observer to detect when Lightbox content changes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (
-          mutation.type === "attributes" &&
-          mutation.target.getAttribute("aria-hidden") === "false"
-        ) {
-          updateImageTitle(); // Update text only when visible
-        }
+    const o = new MutationObserver((e) => {
+        e.forEach((e) => {
+          "attributes" === e.type &&
+            "false" === e.target.getAttribute("aria-hidden") &&
+            r();
+        });
+      }),
+      l = document.querySelector(".glightbox-container");
+    l && o.observe(l, { attributes: !0, subtree: !0 }),
+      document.querySelectorAll(".preview-link").forEach((e) => {
+        e.addEventListener("click", r);
+      }),
+      document.addEventListener("click", (e) => {
+        e.target.closest(".gnext, .gprev") && r();
       });
-    });
-
-    // Start observing changes in the lightbox container
-    const lightboxContainer = document.querySelector(".glightbox-container");
-    if (lightboxContainer) {
-      observer.observe(lightboxContainer, { attributes: true, subtree: true });
-    }
-
-    // Event listeners for clicking images and navigation buttons
-    document.querySelectorAll(".preview-link").forEach((link) => {
-      link.addEventListener("click", updateImageTitle);
-    });
-
-    document.addEventListener("click", (event) => {
-      if (event.target.closest(".gnext, .gprev")) {
-        updateImageTitle();
-      }
-    });
-
-    // console.log(nextPrevButtons);
-    // console.log(imageLinks);
   }
-
-  updateStaticText();
-
-  function switchLanguage() {
-    currentLang = currentLang === "en" ? "de" : "en";
-    localStorage.setItem("language", currentLang);
-    productIndex = 0;
-    charIndex = 0;
-    isDeleting = false;
-
-    updateStaticText();
-  }
-
-  document.getElementById("toggle-lang").addEventListener("click", function () {
-    switchLanguage();
-  });
+  s(),
+    document
+      .getElementById("toggle-lang")
+      .addEventListener("click", function () {
+        (n = "en" === n ? "de" : "en"),
+          localStorage.setItem("language", n),
+          (r = 0),
+          (o = 0),
+          (l = !1),
+          s();
+      });
 });

@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("img").forEach((img) => {
-    img.setAttribute("loading", "lazy");
+  document.querySelectorAll("img").forEach((e) => {
+    e.setAttribute("loading", "lazy");
   });
-  const dynamicText = document.getElementById("dynamic-text");
-  document.querySelectorAll("img").forEach((img) => {
-    img.setAttribute("loading", "lazy");
+  document.getElementById("dynamic-text");
+  document.querySelectorAll("img").forEach((e) => {
+    e.setAttribute("loading", "lazy");
   });
-  // Define translations for English and German
-  const translations = {
+  const e = {
     en: {
       meta: {
         title:
@@ -17,29 +16,23 @@ document.addEventListener("DOMContentLoaded", function () {
         keywords:
           "RENOBOX, sustainable bathroom modernization, wellness space renovation, bathroom design, German engineering, shower enclosures, mirrors, room dividers, stainless steel drainage systems, made in Germany, bathroom solutions, high-quality bathroom renovation, functional design, modern living spaces, NEO Building, eco-friendly bathroom solutions, custom bathroom products",
       },
-
       pageContent: {
         siteHeader: "RENOBOX",
         siteCrum: "RENOBOX",
         siteHeader2: "We bring your ideas to life!",
-        // Page Intro
         pageIntroHeader: "The modular solution for modern bathrooms.",
         pageIntroDescription:
           "Developed with German engineering expertise and a focus on sustainability, RENOBOX enables easy and high-quality modernization of bathrooms, wellness, and living spaces.",
         pageIntroDescription2:
           "Made in Germany, this innovative concept stands for durable design, functionality, and stylish aesthetics.",
-
         pageIntroHeader2: "RENOBOX by Neo Building",
         pageInroToGallery: "Play Concept Film",
-        //   Call to action examples
         callToActionHeaderExamples: "We find the solution for your ideas!",
         callToActionDescriptionExamples:
           "In addition to our commitment to project business, we have always offered our products to private clients. Benefit from our years of experience in realizing your private construction project. We bring your ideas for a personalized design in space to life. With the highest precision. With products developed by us. Exclusively manufactured in Germany.",
         callToActionLinkExamples: "References",
-        // more info buttons
         moreInfo: "Learn more",
       },
-
       imageTitleZoom:
         "For questions about specific products or if you need advice, you can reach us at info@neo-building.com or by phone at +49-221-95490929-0.",
     },
@@ -52,135 +45,82 @@ document.addEventListener("DOMContentLoaded", function () {
         keywords:
           "RENOBOX, nachhaltige Badezimmermodernisierung, Wellnessbereich Renovierung, Badezimmerdesign, deutsche Ingenieurskunst, Duschabtrennungen, Spiegel, Raumteiler, Edelstahl Drainagesysteme, Made in Germany, Badezimmerlösungen, hochwertige Badezimmerrenovierung, funktionales Design, moderne Wohnräume, NEO Building, umweltfreundliche Badezimmerlösungen, maßgeschneiderte Badezimmerprodukte",
       },
-
       pageContent: {
         siteHeader: "RENOBOX",
         siteCrum: "RENOBOX",
         siteHeader2: "Wir finden die Lösung für Ihre Ideen!",
-        // Page Intro
         pageIntroHeader: "Die modulare Lösung für moderne Bäder.",
         pageIntroDescription:
           "Mit deutscher Ingenieurskunst und einem Fokus auf Nachhaltigkeit entwickelt, ermöglicht RENOBOX eine einfache und hochwertige Modernisierung von Bädern, Wellness- und Wohnräumen.",
         pageIntroDescription2:
           "Gefertigt in Deutschland, steht dieses innovative Konzept für langlebiges Design, Funktionalität und eine stilvolle Gestaltung.",
-
         pageIntroHeader2: "RENOBOX von Neo Building",
         pageInroToGallery: "Konzept Film Abspielen",
-        //   Call to action examples
         callToActionHeaderExamples: "Wir finden die Lösung für Ihre Ideen!",
         callToActionDescriptionExamples:
           "Nutzen sie unsere langjährige Erfahrung für die Realisierung Ihres Bauvorhabens. Wir lassen Ihre Ideen für eine individuelle Gestaltung im Raum Realität werden. Mit höchster Präzision. Mit von uns entwickelten Produkten. Ausschließlich in Deutschland gefertigt.",
-        // more Link
         moreInfo: "Mehr Erfahren",
       },
-
       imageTitleZoom:
         "Bei Fragen zu einzelnen Produkten oder Beratungsbedarf erreichen Sie uns unter info@neo-building.com oder telefonisch unter +49-221-95490929-0",
     },
   };
-  // Detect browser language and set default correctly
-  let browserLang = navigator.language || navigator.userLanguage;
-  let detectedLang = browserLang.includes("de") ? "de" : "en";
-  let storedLang = localStorage.getItem("language");
-  let currentLang = storedLang ? storedLang : detectedLang;
-  if (!storedLang) {
-    localStorage.setItem("language", currentLang);
-  }
-
-  let productIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  const typingSpeed = 200;
-  const pauseTime = 4000;
-  const deleteSpeed = 100;
-
-  let typeTimeout;
-
-  function updateStaticText() {
-    // Update the page title and meta description
-    document.title = translations[currentLang].meta.title;
-    const metaDescription = document.querySelector("meta[name='description']");
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        translations[currentLang].meta.description
-      );
+  let n = (navigator.language || navigator.userLanguage).includes("de")
+      ? "de"
+      : "en",
+    t = localStorage.getItem("language"),
+    i = t || n;
+  t || localStorage.setItem("language", i);
+  let o = 0,
+    r = 0,
+    a = !1;
+  function s() {
+    document.title = e[i].meta.title;
+    const n = document.querySelector("meta[name='description']");
+    function t(e, n) {
+      const i = document.querySelector(`#${e}`);
+      i &&
+        ("string" == typeof n
+          ? (i.innerHTML = n)
+          : "object" == typeof n &&
+            Object.keys(n).forEach((e) => {
+              t(e, n[e]);
+            }));
+      const o = document.querySelectorAll(`.${e}`);
+      o &&
+        "string" == typeof n &&
+        o.forEach((e) => {
+          e.innerHTML = n;
+        });
     }
-    function applyTranslation(key, obj) {
-      const element = document.querySelector(`#${key}`);
-      if (element) {
-        if (typeof obj === "string") {
-          element.innerHTML = obj;
-        } else if (typeof obj === "object") {
-          Object.keys(obj).forEach((subKey) => {
-            applyTranslation(subKey, obj[subKey]);
-          });
-        }
-      }
-      const classElement = document.querySelectorAll(`.${key}`);
-      if (classElement) {
-        if (typeof obj === "string") {
-          classElement.forEach((text) => {
-            text.innerHTML = obj;
-          });
-        }
-      }
-    }
-
-    // applyTranslation("meta", translations[currentLang].meta);
-    applyTranslation("pageContent", translations[currentLang].pageContent);
-    applyTranslation(
-      "constructionsNeoxDrains",
-      translations[currentLang].constructionsNeoxDrains
-    );
-
-    let contactText = document.querySelectorAll(".contactText");
-    contactText.forEach(
-      (text) =>
-        (text.innerText = translations[currentLang].pageContent.contactText)
-    );
-    let descriptionHotels = document.querySelectorAll(".descriptionHotels");
-    descriptionHotels.forEach((descriptionHotel) => {
-      descriptionHotel.innerText =
-        translations[currentLang].pageContent.descriptionHotels;
-    });
-    let descriptionPolaroids = document.querySelectorAll(
-      ".descriptionPolaroid"
-    );
-    descriptionPolaroids.forEach((descriptionPolaroid) => {
-      descriptionPolaroid.innerText =
-        translations[currentLang].pageContent.descriptionPolaroid;
-    });
-    let descriptionMarss = document.querySelectorAll(".descriptionMars");
-    descriptionMarss.forEach((descriptionMars) => {
-      descriptionMars.innerText =
-        translations[currentLang].pageContent.descriptionMars;
-    });
-    let titleMarsNews = document.querySelectorAll(".titleMarsNew");
-    titleMarsNews.forEach((titleMarsNew) => {
-      titleMarsNew.innerText =
-        translations[currentLang].pageContent.titleMarsNew;
-    });
-    let titlePolaroidNews = document.querySelectorAll(".titlePolaroidNew");
-    titlePolaroidNews.forEach((titlePolaroidNew) => {
-      titlePolaroidNew.innerText =
-        translations[currentLang].pageContent.titlePolaroidNew;
-    });
-    let titleMarsConstructions = document.querySelectorAll(
-      ".titleMarsConstruction"
-    );
-    titleMarsConstructions.forEach((titleMarsConstruction) => {
-      titleMarsConstruction.innerText =
-        translations[currentLang].pageContent.titleMarsConstruction;
-    });
-    let titlePolaroidConstructions = document.querySelectorAll(
-      ".titlePolaroidConstruction"
-    );
-    titlePolaroidConstructions.forEach((titlePolaroidConstruction) => {
-      titlePolaroidConstruction.innerText =
-        translations[currentLang].pageContent.titlePolaroidConstruction;
-    });
-    const glightbox = GLightbox({
+    n && n.setAttribute("content", e[i].meta.description),
+      t("pageContent", e[i].pageContent),
+      t("constructionsNeoxDrains", e[i].constructionsNeoxDrains),
+      document
+        .querySelectorAll(".contactText")
+        .forEach((n) => (n.innerText = e[i].pageContent.contactText)),
+      document.querySelectorAll(".descriptionHotels").forEach((n) => {
+        n.innerText = e[i].pageContent.descriptionHotels;
+      }),
+      document.querySelectorAll(".descriptionPolaroid").forEach((n) => {
+        n.innerText = e[i].pageContent.descriptionPolaroid;
+      }),
+      document.querySelectorAll(".descriptionMars").forEach((n) => {
+        n.innerText = e[i].pageContent.descriptionMars;
+      }),
+      document.querySelectorAll(".titleMarsNew").forEach((n) => {
+        n.innerText = e[i].pageContent.titleMarsNew;
+      }),
+      document.querySelectorAll(".titlePolaroidNew").forEach((n) => {
+        n.innerText = e[i].pageContent.titlePolaroidNew;
+      }),
+      document.querySelectorAll(".titleMarsConstruction").forEach((n) => {
+        n.innerText = e[i].pageContent.titleMarsConstruction;
+      }),
+      document.querySelectorAll(".titlePolaroidConstruction").forEach((n) => {
+        n.innerText = e[i].pageContent.titlePolaroidConstruction;
+      });
+    GLightbox({
       selector: ".glightbox",
       openEffect: "zoom",
       closeEffect: "fade",
@@ -191,72 +131,41 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.removeAttribute("inert");
       },
     });
-
-    // Function to update the image title
-    function updateImageTitle() {
+    function o() {
       setTimeout(() => {
-        let imageTitles = document.querySelectorAll(".gslide-title"); // Refresh elements
-        imageTitles.forEach((imageTitle) => {
-          imageTitle.innerText = translations[currentLang].imageTitleZoom;
+        document.querySelectorAll(".gslide-title").forEach((n) => {
+          n.innerText = e[i].imageTitleZoom;
         });
-      }, 100); // Small delay for rendering
+      }, 100);
     }
-    document.addEventListener("keydown", function (event) {
-      // Check if the right arrow key (ArrowRight) is pressed
-      if (event.key === "ArrowRight") {
-        updateImageTitle();
-      }
-      // Check if the left arrow key (ArrowLeft) is pressed
-      if (event.key === "ArrowLeft") {
-        updateImageTitle();
-      }
+    document.addEventListener("keydown", function (e) {
+      "ArrowRight" === e.key && o(), "ArrowLeft" === e.key && o();
     });
-    // Observer to detect when Lightbox content changes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (
-          mutation.type === "attributes" &&
-          mutation.target.getAttribute("aria-hidden") === "false"
-        ) {
-          updateImageTitle(); // Update text only when visible
-        }
+    const r = new MutationObserver((e) => {
+        e.forEach((e) => {
+          "attributes" === e.type &&
+            "false" === e.target.getAttribute("aria-hidden") &&
+            o();
+        });
+      }),
+      a = document.querySelector(".glightbox-container");
+    a && r.observe(a, { attributes: !0, subtree: !0 }),
+      document.querySelectorAll(".preview-link").forEach((e) => {
+        e.addEventListener("click", o);
+      }),
+      document.addEventListener("click", (e) => {
+        e.target.closest(".gnext, .gprev") && o();
       });
-    });
-
-    // Start observing changes in the lightbox container
-    const lightboxContainer = document.querySelector(".glightbox-container");
-    if (lightboxContainer) {
-      observer.observe(lightboxContainer, { attributes: true, subtree: true });
-    }
-
-    // Event listeners for clicking images and navigation buttons
-    document.querySelectorAll(".preview-link").forEach((link) => {
-      link.addEventListener("click", updateImageTitle);
-    });
-
-    document.addEventListener("click", (event) => {
-      if (event.target.closest(".gnext, .gprev")) {
-        updateImageTitle();
-      }
-    });
-
-    // console.log(nextPrevButtons);
-    // console.log(imageLinks);
   }
-
-  updateStaticText();
-
-  function switchLanguage() {
-    currentLang = currentLang === "en" ? "de" : "en";
-    localStorage.setItem("language", currentLang);
-    productIndex = 0;
-    charIndex = 0;
-    isDeleting = false;
-
-    updateStaticText();
-  }
-
-  document.getElementById("toggle-lang").addEventListener("click", function () {
-    switchLanguage();
-  });
+  s(),
+    document
+      .getElementById("toggle-lang")
+      .addEventListener("click", function () {
+        (i = "en" === i ? "de" : "en"),
+          localStorage.setItem("language", i),
+          (o = 0),
+          (r = 0),
+          (a = !1),
+          s();
+      });
 });

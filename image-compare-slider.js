@@ -1,128 +1,82 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Lazy load images
-  document.querySelectorAll("img").forEach((img) => {
-    img.setAttribute("loading", "lazy");
+  document.querySelectorAll("img").forEach((e) => {
+    e.setAttribute("loading", "lazy");
   });
-
-  // Define translations for slider content
-  const translations = {
-    en: {
-      pageContent: {
-        beforeAfterTitle: "Before | After",
-      },
-    },
-    de: {
-      pageContent: {
-        beforeAfterTitle: "Vorher | Nachher",
-      },
-    },
+  const e = {
+    en: { pageContent: { beforeAfterTitle: "Before | After" } },
+    de: { pageContent: { beforeAfterTitle: "Vorher | Nachher" } },
   };
-
-  // Detect browser language and set default correctly
-  let browserLang = navigator.language || navigator.userLanguage;
-  let detectedLang = browserLang.includes("de") ? "de" : "en";
-  let storedLang = localStorage.getItem("language");
-  let currentLang = storedLang ? storedLang : detectedLang;
-  if (!storedLang) {
-    localStorage.setItem("language", currentLang);
+  let t = (navigator.language || navigator.userLanguage).includes("de")
+      ? "de"
+      : "en",
+    n = localStorage.getItem("language"),
+    o = n || t;
+  function r() {
+    !(function e(t, n) {
+      const o = document.querySelector(`#${t}`);
+      o &&
+        ("string" == typeof n
+          ? (o.innerHTML = n)
+          : "object" == typeof n &&
+            Object.keys(n).forEach((t) => {
+              e(t, n[t]);
+            }));
+      const r = document.querySelectorAll(`.${t}`);
+      r &&
+        "string" == typeof n &&
+        r.forEach((e) => {
+          e.innerHTML = n;
+        });
+    })("pageContent", e[o].pageContent);
   }
-  // Translation logic for slider
-  function updateStaticText() {
-    function applyTranslation(key, obj) {
-      const element = document.querySelector(`#${key}`);
-      if (element) {
-        if (typeof obj === "string") {
-          element.innerHTML = obj;
-        } else if (typeof obj === "object") {
-          Object.keys(obj).forEach((subKey) => {
-            applyTranslation(subKey, obj[subKey]);
-          });
-        }
-      }
-      const classElement = document.querySelectorAll(`.${key}`);
-      if (classElement) {
-        if (typeof obj === "string") {
-          classElement.forEach((text) => {
-            text.innerHTML = obj;
-          });
-        }
-      }
-    }
-    // applyTranslation("meta", translations[currentLang].meta);
-    applyTranslation("pageContent", translations[currentLang].pageContent);
-  }
-  updateStaticText();
-  function switchLanguage() {
-    currentLang = currentLang === "en" ? "de" : "en";
-    localStorage.setItem("language", currentLang);
-
-    updateStaticText();
-  }
-  document.getElementById("toggle-lang").addEventListener("click", function () {
-    switchLanguage();
-    updateStaticText();
-  });
-  updateStaticText();
-
-  // Slider drag functionality
-  const container = document.querySelector(".image-wrapper"); // Updated to image-wrapper
-  const divider = document.querySelector(".divider");
-  const beforeImage = document.querySelector(".before-image");
-  const afterImage = document.querySelector(".after-image");
-  const dragCircle = document.querySelector(".drag-circle");
-
-  let isDragging = false;
-
-  dragCircle.addEventListener("mousedown", (e) => {
-    e.preventDefault();
-    isDragging = true;
-    dragCircle.style.cursor = "grabbing";
-  });
-
-  document.addEventListener("mouseup", () => {
-    if (isDragging) {
-      isDragging = false;
-      dragCircle.style.cursor = "grab";
-    }
-  });
-
-  document.addEventListener("mousemove", (e) => {
-    if (!isDragging) return;
-
-    const rect = container.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const width = rect.width;
-    const newPos = Math.max(0, Math.min(x, width));
-    const percentage = (newPos / width) * 100;
-
-    divider.style.left = `${percentage}%`;
-    beforeImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
-    afterImage.style.clipPath = `inset(0 0 0 ${percentage}%)`;
-  });
-
-  // Touch support
-  dragCircle.addEventListener("touchstart", (e) => {
-    e.preventDefault();
-    isDragging = true;
-  });
-
-  document.addEventListener("touchend", () => {
-    if (isDragging) {
-      isDragging = false;
-    }
-  });
-
-  document.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
-    const touch = e.touches[0];
-    const rect = container.getBoundingClientRect();
-    const x = touch.clientX - rect.left;
-    const width = rect.width;
-    const newPos = Math.max(0, Math.min(x, width));
-    const percentage = (newPos / width) * 100;
-
-    divider.style.left = `${percentage}%`;
-    beforeImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
-    afterImage.style.clipPath = `inset(0 0 0 ${percentage}%)`;
-  });
+  n || localStorage.setItem("language", o),
+    r(),
+    document
+      .getElementById("toggle-lang")
+      .addEventListener("click", function () {
+        (o = "en" === o ? "de" : "en"),
+          localStorage.setItem("language", o),
+          r(),
+          r();
+      }),
+    r();
+  const a = document.querySelector(".image-wrapper"),
+    c = document.querySelector(".divider"),
+    l = document.querySelector(".before-image"),
+    i = document.querySelector(".after-image"),
+    u = document.querySelector(".drag-circle");
+  let d = !1;
+  u.addEventListener("mousedown", (e) => {
+    e.preventDefault(), (d = !0), (u.style.cursor = "grabbing");
+  }),
+    document.addEventListener("mouseup", () => {
+      d && ((d = !1), (u.style.cursor = "grab"));
+    }),
+    document.addEventListener("mousemove", (e) => {
+      if (!d) return;
+      const t = a.getBoundingClientRect(),
+        n = e.clientX - t.left,
+        o = t.width,
+        r = (Math.max(0, Math.min(n, o)) / o) * 100;
+      (c.style.left = `${r}%`),
+        (l.style.clipPath = `inset(0 ${100 - r}% 0 0)`),
+        (i.style.clipPath = `inset(0 0 0 ${r}%)`);
+    }),
+    u.addEventListener("touchstart", (e) => {
+      e.preventDefault(), (d = !0);
+    }),
+    document.addEventListener("touchend", () => {
+      d && (d = !1);
+    }),
+    document.addEventListener("touchmove", (e) => {
+      if (!d) return;
+      const t = e.touches[0],
+        n = a.getBoundingClientRect(),
+        o = t.clientX - n.left,
+        r = n.width,
+        u = (Math.max(0, Math.min(o, r)) / r) * 100;
+      (c.style.left = `${u}%`),
+        (l.style.clipPath = `inset(0 ${100 - u}% 0 0)`),
+        (i.style.clipPath = `inset(0 0 0 ${u}%)`);
+    });
 });

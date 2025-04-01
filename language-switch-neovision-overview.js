@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("img").forEach((img) => {
-    img.setAttribute("loading", "lazy");
+  document.querySelectorAll("img").forEach((e) => {
+    e.setAttribute("loading", "lazy");
   });
-  const dynamicText = document.getElementById("dynamic-text");
-  document.querySelectorAll("img").forEach((img) => {
-    img.setAttribute("loading", "lazy");
+  document.getElementById("dynamic-text");
+  document.querySelectorAll("img").forEach((e) => {
+    e.setAttribute("loading", "lazy");
   });
-  // Define translations for English and German
-  const translations = {
+  const e = {
     en: {
       meta: {
         title:
@@ -17,12 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
         keywords:
           "NEOVISION shower enclosures, custom glass showers, frameless glass shower enclosures, premium shower enclosures, luxury glass shower partitions, tailored shower enclosures, glass shower systems, modern shower enclosures, shower enclosures for homes, commercial shower enclosures, custom glass shower designs, bespoke shower enclosures, shower enclosure installation, durable shower enclosures, high-quality glass showers, Cologne shower enclosures, NRW shower solutions",
       },
-
       pageContent: {
         siteHeader: "Showers",
         siteCrum: "NEOVISION",
         siteHeader2: "We bring your ideas to life!",
-        // Page Intro
         pageIntroHeader: "Expertise in Glass Integration",
         pageIntroDescription:
           "Minimalist and streamlined fittings made from high-quality materials emphasize the crystal-clear aesthetic of our frameless shower enclosures.",
@@ -35,12 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
         pageIntroDescription3:
           "We offer a range of shower enclosure solutions tailored to your individual needs and project requirements.",
         pageInroToGallery: "View Images",
-        // Call to action references
         callToActionHeader: "Project Experience",
         callToActionDescription:
           "We set extremely high standards for the materials we use, as well as for the shape and functionality of our products. The design of our products is timeless. Our goal has always been, and continues to be, to ensure that you enjoy our products for many years to come. All of our products are designed in-house: from the prototype to series production, including extensive testing to guarantee lasting value and reliability.",
         callToActionLink: "References",
-        // Classic Section Content
         classicContentHeader:
           "<span class='custom-green'>NEOVISION</span> Classic: Modern Classic",
         classicContentDescription:
@@ -64,12 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
           "Fitting made of solid brass, high-gloss chrome-plated",
         classicContentPoint8:
           "Custom fittings with powder coating/PVD coating, e.g. matte black, available",
-        //   Call to action examples
         callToActionHeaderExamples: "We find the solution for your ideas!",
         callToActionDescriptionExamples:
           "In addition to our commitment to project business, we have always offered our products to private clients. Benefit from our years of experience in realizing your private construction project. We bring your ideas for a personalized design in space to life. With the highest precision. With products developed by us. Exclusively manufactured in Germany.",
         callToActionLinkExamples: "Shower configurations",
-        // Pura Section Content
         puraContentHeader:
           "<span class='custom-green'>NEOVISION</span> Pura: Pure Minimalism",
         puraContentDescription:
@@ -93,12 +86,10 @@ document.addEventListener("DOMContentLoaded", function () {
           "Wall connection with adjustable wall angle possible",
         puraContentPoint8:
           "Wall connection with NEOX U-profile made of polished or brushed stainless steel possible",
-        //   Call to action gallery
         callToActionHeaderGallery: "Further Insights",
         callToActionDescriptionGallery:
           "They say a picture is worth a thousand words. Here, each one speaks of dedication, innovation, and the beauty of precise craftsmanship.",
         callToActionLinkGallery: "Gallery",
-        // Easy Section Content
         easyContentHeader:
           "<span class='custom-green'>NEOVISION</span> Easy: Simply Good",
         easyContentDescription:
@@ -110,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
         easyContentDescription3:
           "NEOVISION Easy is suitable for attaching the door directly to the wall, for mounting on a side panel at a 90° angle, or for attaching the hinged door in alignment with a fixed panel.",
         easyContentPoint1: "Frameless glass shower partition.",
-        // easyContentPoint2: "Made of 8mm safety glass (clear).",
         easyContentPoint3: "Made of 8mm safety glass (clear).",
         easyContentPoint4:
           "Fitting parts of the pivot door, corners, and wall angles aligned at the same height.",
@@ -121,10 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "The angle of the wall mount is continuously adjustable from 5° to 180° (aligned).",
         easyContentPoint8:
           "Wall connection with stainless steel wall strip possible.",
-
-        // Image Section Content
         filterAll: "All",
-
         pleaseNote:
           "They say an image is worth a thousand words. Here, each one speaks of dedication, innovation, and the beauty of precision craftsmanship.",
         descriptionClassic: "Modern Classic",
@@ -137,16 +124,13 @@ document.addEventListener("DOMContentLoaded", function () {
         titleEasy: "NEOVISION Easy",
         titlePura: "NEOVISION Pura",
         titleWalkIn: "NEOVISION Walk-In",
-        // more info buttons
         moreInfo: "Learn more",
       },
       constructionsNeovision: {
         h2Glas: "Overview",
         pDescriptionNeovision:
           "Minimalist and sleekly designed fittings made from high-quality materials emphasize the crystal-clear aesthetics of our frameless shower partitions.",
-        // Feature Section
         featureMore: "Mehr",
-        // NEOVISION CLASSIC
         featureCLassicTitle:
           "<span class='custom-green'>NEOVISION</span> Classic",
         featureCLassicDescription:
@@ -156,7 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "Pivot door fittings mounted at the top and bottom of the glass",
         featureCLassicPointThree:
           "Custom-made fittings with powder coating/PVD, e.g., matte black, available",
-        // NEOVISION Pura
         featurePuraTitle: "<span class='custom-green'>NEOVISION</span> Pura",
         featurePuraDescription:
           "The purist design of the frameless real glass shower made of 8 mm toughened safety glass is reflected in the completely flush inner surface.",
@@ -165,7 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "Fittings recessed from the top and bottom edges of the glass",
         featurePuraPointThree:
           "Wall connection possible with highly adjustable wall brackets",
-        // NEOVISION Easy
         featureEasyTitle: "<span class='custom-green'>NEOVISION</span> Easy",
         featureEasyDescription:
           "The extremely robust fitting system of the NEOVISION Easy, made of solid brass with maintenance-free plain bearings, is perfectly suited for project applications.",
@@ -174,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "Fittings set back from the top and bottom edges of the glass",
         featureEasyPointThree:
           "Wall connection possible with stainless steel wall profile",
-        // NEOVISION Walk-In
         featureWalkInTitle: "Other custom-made solutions",
         featureWalkInDescription:
           "In addition to showers with our fittings, we can also create other solutions, such as Walk-In showers completely without fittings. The following too applies to these:",
@@ -194,12 +175,10 @@ document.addEventListener("DOMContentLoaded", function () {
         keywords:
           "NEOVISION Duschabtrennungen, maßgeschneiderte Glasduschen, rahmenlose Glas-Duschabtrennungen, Premium Duschabtrennungen, luxuriöse Glas-Duschtrennwände, individuelle Duschabtrennungen, Glas-Duschsysteme, moderne Duschabtrennungen, Duschabtrennungen für Privathaushalte, gewerbliche Duschabtrennungen, maßgefertigte Glasduschen, maßgeschneiderte Duschabtrennungen, Duschabtrennungsinstallation, langlebige Duschabtrennungen, hochwertige Glasduschen, Duschabtrennungen Köln, NRW Duschlösungen",
       },
-
       pageContent: {
         siteHeader: "Glasduschen",
         siteCrum: "NEOVISION",
         siteHeader2: "Wir finden die Lösung für Ihre Ideen!",
-        // Page Intro
         pageIntroHeader: "Kompetenz bei der Verbindung von Glas",
         pageIntroDescription:
           "Minimalistisch und reduziert gestaltete Beschläge aus hochwertigen Materialien unterstreichen die glasklare Ästhetik unserer rahmenlosen Duschtrennwände.",
@@ -212,12 +191,10 @@ document.addEventListener("DOMContentLoaded", function () {
         pageIntroDescription3:
           "Wir bieten Ihnen verschiedene Lösungen für Duschabtrennungen ganz auf Ihre Bedürfnisse und Planung zugeschnitten.",
         pageInroToGallery: "Bilder Ansehen",
-        // Call to action references
         callToActionHeader: "Projekt Erfahrung",
         callToActionDescription:
           "Wir stellen extrem hohe Anforderungen an das von uns verwendete Material, an die Form und die Funktionalität. Das Design unserer Produkte ist zeitlos. Unser Ziel war und ist es, dass Sie viele Jahre Freude an unseren Produkten haben. Alle Produkte werden von uns selbst konstruiert: vom Prototyp bis zur Serienreife, mit umfangreichen Tests, damit die Produkte Ihnen wirklich nachhaltigen Nutzen bringen.",
         callToActionLink: "Referenzen",
-        // Classic Section Content
         classicContentHeader:
           "<span class='custom-green'>NEOVISION</span> Classic: Moderner Klassiker",
         classicContentDescription:
@@ -240,12 +217,10 @@ document.addEventListener("DOMContentLoaded", function () {
           "Beschlag aus massivem Messing, hochglanz verchromt",
         classicContentPoint8:
           "Sonderanfertigungen des Beschlags mit Pulverbeschichtung/PVD Beschichtung z.B Schwarzmatt möglich",
-        //   Call to action examples
         callToActionHeaderExamples: "Wir finden die Lösung für Ihre Ideen!",
         callToActionDescriptionExamples:
           "Neben unserem Engagement im Projektgeschäft haben wir stets unsere Produkte auch Privatkunden angeboten. Nutzen sie unsere langjährige Erfahrung für die Realisierung Ihres privaten Bauvorhabens. Wir lassen Ihre Ideen für eine individuelle Gestaltung im Raum Realität werden. Mit höchster Präzision. Mit von uns entwickelten Produkten. Ausschließlich in Deutschland gefertigt.",
         callToActionLinkExamples: "Duschsituationen",
-        // Pura Section Content
         puraContentHeader:
           "<span class='custom-green'>NEOVISION</span> Pura: Minimalismus Pur",
         puraContentDescription:
@@ -269,12 +244,10 @@ document.addEventListener("DOMContentLoaded", function () {
           "Wandanbindung mit vielfach verstellbarem Wandwinkel möglich",
         puraContentPoint8:
           "Wandanbindung mit NEOX U-Profil aus poliertem oder geschliffenem Edelstahl möglich",
-        //   Call to action gallery
         callToActionHeaderGallery: "Weitere Einblicke",
         callToActionDescriptionGallery:
           "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
         callToActionLinkGallery: "Galerie",
-        // Easy Section Content
         easyContentHeader:
           "<span class='custom-green'>NEOVISION</span> Easy: Einfach Gut",
         easyContentDescription:
@@ -286,7 +259,6 @@ document.addEventListener("DOMContentLoaded", function () {
         easyContentDescription3:
           "NEOVISION Easy eignet sich für die Befestigung der Tür direkt an der Wand, für die Befestigung an einem Seitenteil über 90° oder auch für die Befestigung der Drehtür in Flucht an einem Festelement.",
         easyContentPoint1: "Rahmenlose Ganzglas-Duschabtrennung",
-        // easyContentPoint2: "Aus 8mm Sicherheitsglas (hell)",
         easyContentPoint3: "Aus 8mm Sicherheitsglas (hell)",
         easyContentPoint4:
           "Beschlagteile von Drehtür, Winkeln und Wandwinkeln auf einer Höhe",
@@ -296,7 +268,6 @@ document.addEventListener("DOMContentLoaded", function () {
         easyContentPoint7:
           "Winkel der Wandbefestigung stufenlos von 5° bis 180° (fluchtend) einstellbar",
         easyContentPoint8: "Wandanbindung mit Wandleiste aus Edelstahl möglich",
-        // Image Section Content
         filterAll: "Alle",
         pleaseNote:
           "Man sagt, ein Bild sagt mehr als tausend Worte. Hier spricht jedes Einzelne von Hingabe, Innovation und der Schönheit präziser Handwerkskunst.",
@@ -310,16 +281,13 @@ document.addEventListener("DOMContentLoaded", function () {
         titleEasy: "NEOVISION Easy",
         titlePura: "NEOVISION Pura",
         titleWalkIn: "NEOVISION Walk-In",
-        // more Link
         moreInfo: "Mehr Erfahren",
       },
       constructionsNeovision: {
         h2Glas: "Übersicht",
         pDescriptionNeovision:
           "Minimalistisch und reduziert gestaltete Beschläge aus hochwertigen Materialien unterstreichen die glasklare Ästhetik unserer rahmenlosen Duschtrennwände.",
-        // Feature Section
         featureMore: "Mehr",
-        // NEOVISION CLASSIC
         featureCLassicTitle:
           "<span class='custom-green'>NEOVISION</span> Classic",
         featureCLassicDescription:
@@ -329,7 +297,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "Drehtür-Beschläge oben und unten am Glas befestigt",
         featureCLassicPointThree:
           "Sonderanfertigungen des Beschlages mit Pulverbeschichtung/PVD z.B. Schwarzmatt möglich",
-        // NEOVISION Pura
         featurePuraTitle: "<span class='custom-green'>NEOVISION</span> Pura",
         featurePuraDescription:
           "Der Purismus der rahmenlosen Echtglasdusche aus 8 mm Sicherheitsglas zeigt sich auf der völlig flächenbündigen Innenseite.",
@@ -338,7 +305,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "Beschläge von Ober- und Unterkante des Glases eingerückt",
         featurePuraPointThree:
           "Wandanbindung mit vielfach verstellbarem Wandwinkel möglich",
-        // NEOVISION Easy
         featureEasyTitle: "<span class='custom-green'>NEOVISION</span> Easy",
         featureEasyDescription:
           "Das extrem robuste Beschlagsystem der NEOVISION Easy aus massivem Messing mit wartungsfreien Gleitlagern ist perfekt geeignet für den Projektbereich.",
@@ -347,7 +313,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "Beschläge von Ober- und Unterkante des Glases eingerückt",
         featureEasyPointThree:
           "Wandanbindung mit Wandleiste aus Edelstahl möglich",
-        // NEOVISION Walk-In
         featureWalkInTitle: "Weitere Sonderanfertigungen",
         featureWalkInDescription:
           "Neben Duschen mit unseren Beschlägen lassen sich auch andere Lösungen realisieren, z.B. Walk-In Duschen komplett ohne Beschläge. Auch für diese gilt:",
@@ -359,109 +324,62 @@ document.addEventListener("DOMContentLoaded", function () {
         "Bei Fragen zu einzelnen Produkten oder Beratungsbedarf erreichen Sie uns unter info@neo-building.com oder telefonisch unter +49-221-95490929-0",
     },
   };
-  // Detect browser language and set default correctly
-  let browserLang = navigator.language || navigator.userLanguage;
-  let detectedLang = browserLang.includes("de") ? "de" : "en";
-  let storedLang = localStorage.getItem("language");
-  let currentLang = storedLang ? storedLang : detectedLang;
-  if (!storedLang) {
-    localStorage.setItem("language", currentLang);
-  }
-
-  let productIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  const typingSpeed = 200;
-  const pauseTime = 4000;
-  const deleteSpeed = 100;
-
-  let typeTimeout;
-
-  function updateStaticText() {
-    // Update the page title and meta description
-    document.title = translations[currentLang].meta.title;
-    const metaDescription = document.querySelector("meta[name='description']");
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        translations[currentLang].meta.description
-      );
+  let n = (navigator.language || navigator.userLanguage).includes("de")
+      ? "de"
+      : "en",
+    t = localStorage.getItem("language"),
+    s = t || n;
+  t || localStorage.setItem("language", s);
+  let i = 0,
+    a = 0,
+    r = !1;
+  function o() {
+    document.title = e[s].meta.title;
+    const n = document.querySelector("meta[name='description']");
+    function t(e, n) {
+      const s = document.querySelector(`#${e}`);
+      s &&
+        ("string" == typeof n
+          ? (s.innerHTML = n)
+          : "object" == typeof n &&
+            Object.keys(n).forEach((e) => {
+              t(e, n[e]);
+            }));
+      const i = document.querySelectorAll(`.${e}`);
+      i &&
+        "string" == typeof n &&
+        i.forEach((e) => {
+          e.innerHTML = n;
+        });
     }
-    function applyTranslation(key, obj) {
-      const element = document.querySelector(`#${key}`);
-      if (element) {
-        if (typeof obj === "string") {
-          element.innerHTML = obj;
-        } else if (typeof obj === "object") {
-          Object.keys(obj).forEach((subKey) => {
-            applyTranslation(subKey, obj[subKey]);
-          });
-        }
-      }
-      const classElement = document.querySelectorAll(`.${key}`);
-      if (classElement) {
-        if (typeof obj === "string") {
-          classElement.forEach((text) => {
-            text.innerHTML = obj;
-          });
-        }
-      }
-    }
-
-    // applyTranslation("meta", translations[currentLang].meta);
-    applyTranslation("pageContent", translations[currentLang].pageContent);
-    applyTranslation(
-      "constructionsNeovision",
-      translations[currentLang].constructionsNeovision
-    );
-
-    let contactText = document.querySelectorAll(".contactText");
-    contactText.forEach(
-      (text) =>
-        (text.innerText = translations[currentLang].pageContent.contactText)
-    );
-    let descriptionHotels = document.querySelectorAll(".descriptionHotels");
-    descriptionHotels.forEach((descriptionHotel) => {
-      descriptionHotel.innerText =
-        translations[currentLang].pageContent.descriptionHotels;
-    });
-    let descriptionPolaroids = document.querySelectorAll(
-      ".descriptionPolaroid"
-    );
-    descriptionPolaroids.forEach((descriptionPolaroid) => {
-      descriptionPolaroid.innerText =
-        translations[currentLang].pageContent.descriptionPolaroid;
-    });
-    let descriptionMarss = document.querySelectorAll(".descriptionMars");
-    descriptionMarss.forEach((descriptionMars) => {
-      descriptionMars.innerText =
-        translations[currentLang].pageContent.descriptionMars;
-    });
-    let titleMarsNews = document.querySelectorAll(".titleMarsNew");
-    titleMarsNews.forEach((titleMarsNew) => {
-      titleMarsNew.innerText =
-        translations[currentLang].pageContent.titleMarsNew;
-    });
-    let titlePolaroidNews = document.querySelectorAll(".titlePolaroidNew");
-    titlePolaroidNews.forEach((titlePolaroidNew) => {
-      titlePolaroidNew.innerText =
-        translations[currentLang].pageContent.titlePolaroidNew;
-    });
-    let titleMarsConstructions = document.querySelectorAll(
-      ".titleMarsConstruction"
-    );
-    titleMarsConstructions.forEach((titleMarsConstruction) => {
-      titleMarsConstruction.innerText =
-        translations[currentLang].pageContent.titleMarsConstruction;
-    });
-    let titlePolaroidConstructions = document.querySelectorAll(
-      ".titlePolaroidConstruction"
-    );
-    titlePolaroidConstructions.forEach((titlePolaroidConstruction) => {
-      titlePolaroidConstruction.innerText =
-        translations[currentLang].pageContent.titlePolaroidConstruction;
-    });
-    const glightbox = GLightbox({
+    n && n.setAttribute("content", e[s].meta.description),
+      t("pageContent", e[s].pageContent),
+      t("constructionsNeovision", e[s].constructionsNeovision),
+      document
+        .querySelectorAll(".contactText")
+        .forEach((n) => (n.innerText = e[s].pageContent.contactText)),
+      document.querySelectorAll(".descriptionHotels").forEach((n) => {
+        n.innerText = e[s].pageContent.descriptionHotels;
+      }),
+      document.querySelectorAll(".descriptionPolaroid").forEach((n) => {
+        n.innerText = e[s].pageContent.descriptionPolaroid;
+      }),
+      document.querySelectorAll(".descriptionMars").forEach((n) => {
+        n.innerText = e[s].pageContent.descriptionMars;
+      }),
+      document.querySelectorAll(".titleMarsNew").forEach((n) => {
+        n.innerText = e[s].pageContent.titleMarsNew;
+      }),
+      document.querySelectorAll(".titlePolaroidNew").forEach((n) => {
+        n.innerText = e[s].pageContent.titlePolaroidNew;
+      }),
+      document.querySelectorAll(".titleMarsConstruction").forEach((n) => {
+        n.innerText = e[s].pageContent.titleMarsConstruction;
+      }),
+      document.querySelectorAll(".titlePolaroidConstruction").forEach((n) => {
+        n.innerText = e[s].pageContent.titlePolaroidConstruction;
+      });
+    GLightbox({
       selector: ".glightbox",
       openEffect: "zoom",
       closeEffect: "fade",
@@ -472,72 +390,41 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.removeAttribute("inert");
       },
     });
-
-    // Function to update the image title
-    function updateImageTitle() {
+    function i() {
       setTimeout(() => {
-        let imageTitles = document.querySelectorAll(".gslide-title"); // Refresh elements
-        imageTitles.forEach((imageTitle) => {
-          imageTitle.innerText = translations[currentLang].imageTitleZoom;
+        document.querySelectorAll(".gslide-title").forEach((n) => {
+          n.innerText = e[s].imageTitleZoom;
         });
-      }, 100); // Small delay for rendering
+      }, 100);
     }
-    document.addEventListener("keydown", function (event) {
-      // Check if the right arrow key (ArrowRight) is pressed
-      if (event.key === "ArrowRight") {
-        updateImageTitle();
-      }
-      // Check if the left arrow key (ArrowLeft) is pressed
-      if (event.key === "ArrowLeft") {
-        updateImageTitle();
-      }
+    document.addEventListener("keydown", function (e) {
+      "ArrowRight" === e.key && i(), "ArrowLeft" === e.key && i();
     });
-    // Observer to detect when Lightbox content changes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (
-          mutation.type === "attributes" &&
-          mutation.target.getAttribute("aria-hidden") === "false"
-        ) {
-          updateImageTitle(); // Update text only when visible
-        }
+    const a = new MutationObserver((e) => {
+        e.forEach((e) => {
+          "attributes" === e.type &&
+            "false" === e.target.getAttribute("aria-hidden") &&
+            i();
+        });
+      }),
+      r = document.querySelector(".glightbox-container");
+    r && a.observe(r, { attributes: !0, subtree: !0 }),
+      document.querySelectorAll(".preview-link").forEach((e) => {
+        e.addEventListener("click", i);
+      }),
+      document.addEventListener("click", (e) => {
+        e.target.closest(".gnext, .gprev") && i();
       });
-    });
-
-    // Start observing changes in the lightbox container
-    const lightboxContainer = document.querySelector(".glightbox-container");
-    if (lightboxContainer) {
-      observer.observe(lightboxContainer, { attributes: true, subtree: true });
-    }
-
-    // Event listeners for clicking images and navigation buttons
-    document.querySelectorAll(".preview-link").forEach((link) => {
-      link.addEventListener("click", updateImageTitle);
-    });
-
-    document.addEventListener("click", (event) => {
-      if (event.target.closest(".gnext, .gprev")) {
-        updateImageTitle();
-      }
-    });
-
-    // console.log(nextPrevButtons);
-    // console.log(imageLinks);
   }
-
-  updateStaticText();
-
-  function switchLanguage() {
-    currentLang = currentLang === "en" ? "de" : "en";
-    localStorage.setItem("language", currentLang);
-    productIndex = 0;
-    charIndex = 0;
-    isDeleting = false;
-
-    updateStaticText();
-  }
-
-  document.getElementById("toggle-lang").addEventListener("click", function () {
-    switchLanguage();
-  });
+  o(),
+    document
+      .getElementById("toggle-lang")
+      .addEventListener("click", function () {
+        (s = "en" === s ? "de" : "en"),
+          localStorage.setItem("language", s),
+          (i = 0),
+          (a = 0),
+          (r = !1),
+          o();
+      });
 });

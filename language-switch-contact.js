@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("img").forEach((img) => {
-    img.setAttribute("loading", "lazy");
+  document.querySelectorAll("img").forEach((e) => {
+    e.setAttribute("loading", "lazy");
   });
-  const dynamicText = document.getElementById("dynamic-text");
-
-  // Define translations for English and German
-  const translations = {
+  document.getElementById("dynamic-text");
+  const e = {
     en: {
       meta: {
         title: "Neo Building | Contact Information",
@@ -13,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "We look forward to your inquiry either via email at info@neo-building.com or by phone at +49-221-95490929-0.",
         keywords: "Contact, Neo Building, email, address",
       },
-
       pageContent: {
         contactText: "Contact",
         addressStreet: "Albin-Haenseroth-Weg 19 | 50859 Cologne | Germany",
@@ -27,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "Wir freuen uns auf Ihre Anfrage - per E-Mail an info@neo-building.com oder telefonisch unter +49-221-95490929-0",
         keywords: "Kontakt, Neo Building, email, telefon, adresse",
       },
-
       pageContent: {
         contactText: "Kontakt",
         addressStreet: "Albin-Hänseroth-Weg 19 | 50859 Köln | Deutschland",
@@ -35,78 +31,48 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   };
-  // Detect browser language and set default correctly
-  let browserLang = navigator.language || navigator.userLanguage;
-  let detectedLang = browserLang.includes("de") ? "de" : "en";
-  let storedLang = localStorage.getItem("language");
-  let currentLang = storedLang ? storedLang : detectedLang;
-  if (!storedLang) {
-    localStorage.setItem("language", currentLang);
-  }
-
-  let productIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  const typingSpeed = 200;
-  const pauseTime = 4000;
-  const deleteSpeed = 100;
-
-  let typeTimeout;
-
-  function updateStaticText() {
-    // Update the page title and meta description
-    document.title = translations[currentLang].meta.title;
-    const metaDescription = document.querySelector("meta[name='description']");
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        translations[currentLang].meta.description
-      );
-    }
-    function applyTranslation(key, obj) {
-      const element = document.querySelector(`#${key}`);
-      if (element) {
-        if (typeof obj === "string") {
-          element.innerHTML = obj;
-        } else if (typeof obj === "object") {
-          Object.keys(obj).forEach((subKey) => {
-            applyTranslation(subKey, obj[subKey]);
+  let t = (navigator.language || navigator.userLanguage).includes("de")
+      ? "de"
+      : "en",
+    n = localStorage.getItem("language"),
+    o = n || t;
+  n || localStorage.setItem("language", o);
+  let a = 0,
+    r = 0,
+    i = !1;
+  function c() {
+    document.title = e[o].meta.title;
+    const t = document.querySelector("meta[name='description']");
+    t && t.setAttribute("content", e[o].meta.description),
+      (function e(t, n) {
+        const o = document.querySelector(`#${t}`);
+        o &&
+          ("string" == typeof n
+            ? (o.innerHTML = n)
+            : "object" == typeof n &&
+              Object.keys(n).forEach((t) => {
+                e(t, n[t]);
+              }));
+        const a = document.querySelectorAll(`.${t}`);
+        a &&
+          "string" == typeof n &&
+          a.forEach((e) => {
+            e.innerHTML = n;
           });
-        }
-      }
-      const classElement = document.querySelectorAll(`.${key}`);
-      if (classElement) {
-        if (typeof obj === "string") {
-          classElement.forEach((text) => {
-            text.innerHTML = obj;
-          });
-        }
-      }
-    }
-
-    // applyTranslation("meta", translations[currentLang].meta);
-    applyTranslation("pageContent", translations[currentLang].pageContent);
-
-    let contactText = document.querySelectorAll(".contactText");
-    contactText.forEach(
-      (text) =>
-        (text.innerText = translations[currentLang].pageContent.contactText)
-    );
+      })("pageContent", e[o].pageContent),
+      document
+        .querySelectorAll(".contactText")
+        .forEach((t) => (t.innerText = e[o].pageContent.contactText));
   }
-
-  updateStaticText();
-
-  function switchLanguage() {
-    currentLang = currentLang === "en" ? "de" : "en";
-    localStorage.setItem("language", currentLang);
-    productIndex = 0;
-    charIndex = 0;
-    isDeleting = false;
-
-    updateStaticText();
-  }
-
-  document.getElementById("toggle-lang").addEventListener("click", function () {
-    switchLanguage();
-  });
+  c(),
+    document
+      .getElementById("toggle-lang")
+      .addEventListener("click", function () {
+        (o = "en" === o ? "de" : "en"),
+          localStorage.setItem("language", o),
+          (a = 0),
+          (r = 0),
+          (i = !1),
+          c();
+      });
 });
